@@ -1,0 +1,81 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Base.Theme.MedTrust" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Customize your dark theme here. -->
+        <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+    </style>
+
+
+    <style name="LightCalendarTheme" parent="ThemeOverlay.Material3.MaterialCalendar">
+        <item name="materialCalendarStyle">@style/CustomCalendarStyle</item>
+
+        <item name="colorSurfaceContainerHigh">@color/white</item>
+        <item name="colorOnSurface">@color/darkBlue</item>
+        <item name="colorOnSurfaceVariant">@color/darkBlue</item>
+        <item name="colorPrimary">@color/darkBlue</item>
+
+
+    </style>
+
+<!--    main custom widget styling is done here-->
+    
+    <style name="CustomCalendarStyle" parent="Widget.Material3.MaterialCalendar">
+        <!-- Today style -->
+        <item name="dayTodayStyle">@style/CalendarTodayStyle</item>
+        <item name="dayStyle">@style/CalendarDayStyle</item>
+        <!-- Selected style -->
+        <item name="daySelectedStyle">@style/CalendarSelectedStyle</item>
+        <item name="materialCalendarHeaderTitle">@style/CalendarTitleStyle</item>
+        <item name="materialCalendarMonthNavigationButton">@style/CalendarMonthNavigation</item>
+        
+<!--        year-->
+        <item name="yearSelectedStyle">@style/CalendarSelectedYearStyle</item>
+        <item name="yearStyle">@style/CalendarYearStyle</item>
+        <item name="yearTodayStyle">@style/CalendarYearStyleCurrent</item>
+        
+    </style>
+    
+    <style name="CalendarMonthNavigation" parent="Widget.Material3.MaterialCalendar.MonthNavigationButton">
+        <item name="iconTint">@color/blue</item>
+        <item name="android:textColor">@color/blue</item>
+    </style>
+
+    <style name="CalendarTitleStyle"  parent="Widget.Material3.MaterialCalendar.HeaderTitle">
+        <item name="android:textColor">@color/black</item>
+        <item name="android:textAppearance">?attr/textAppearanceHeadlineLarge</item>
+    </style>
+
+    <style name="CalendarTodayStyle" parent="Widget.Material3.MaterialCalendar.Day.Today">
+        <item name="itemStrokeColor">@color/blue</item>
+        <item name="itemStrokeWidth">1dp</item>
+        <item name="itemTextColor">@color/blue</item>
+    </style>
+
+    <style name="CalendarDayStyle" parent="Widget.Material3.MaterialCalendar.Day">
+        <item name="itemTextColor">@color/blue</item>
+    </style>
+
+
+    <style name="CalendarSelectedStyle" parent="Widget.Material3.MaterialCalendar.Day.Selected">
+        <item name="itemFillColor">@color/blue</item>
+        <item name="itemTextColor">@color/white</item>
+    </style>
+    
+    <style name="CalendarYearStyle" parent="Widget.Material3.MaterialCalendar.Year">
+        <item name="itemTextColor">@color/blue</item>
+    </style>
+
+    <style name="CalendarSelectedYearStyle" parent="Widget.Material3.MaterialCalendar.Year.Selected">
+        <item name="itemFillColor">@color/blue</item>
+        <item name="itemTextColor">@color/white</item>
+    </style>
+
+    <style name="CalendarYearStyleCurrent" parent="Widget.Material3.MaterialCalendar.Year.Today">
+        <item name="itemStrokeColor">@color/blue</item>
+        <item name="itemStrokeWidth">1dp</item>
+        <item name="itemTextColor">@color/blue</item>
+    </style>
+
+
+
+</resources>

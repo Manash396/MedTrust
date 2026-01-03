@@ -1,0 +1,46 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="64dp"
+    android:height="64dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Document body -->
+    <path
+        android:fillColor="#1DE9B6"
+        android:fillAlpha="0.15"
+        android:pathData="
+            M4,3h10l6,6v12a2,2 0,0 1 -2,2H4
+            a2,2 0,0 1 -2,-2V5
+            a2,2 0,0 1 2,-2z"/>
+
+    <!-- Folded corner -->
+    <path
+        android:strokeColor="#1DE9B6"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M14,3v6h6"/>
+
+    <!-- Document lines -->
+    <path
+        android:strokeColor="#1DE9B6"
+        android:strokeWidth="1.5"
+        android:fillColor="@android:color/transparent"
+        android:pathData="M7,13h10M7,17h6"/>
+
+
+    <!-- Scan frame corners (large & visible) -->
+    <path
+        android:strokeColor="#1DE9B6"
+        android:strokeWidth="2"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:fillColor="@android:color/transparent"
+        android:pathData="
+        M2,7 V3 H6
+        M18,3 H22 V7
+        M22,17 V21 H18
+        M6,21 H2 V17"/>
+
+
+
+</vector>

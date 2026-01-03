@@ -1,0 +1,30 @@
+package com.mk.medtrust.doctor.model
+
+data class Doctor(
+    var uid : String = "",
+    val name: String = "",
+    val email: String ="",
+    val contact: String="",
+    val medicalLicenseNo: String ="",
+    val specialisation: String="",
+    val experience : String = "",
+    val rating : String = "",
+    val rateNo : String = "",
+    val consultationFee : String = "",
+    val availability : Availability = Availability()
+){
+    data class Availability(
+        val days : List<String> = emptyList(),
+        val startTime : String = "",
+        val endTime : String = ""
+    )
+}
+
+fun Doctor.toMap() : Map<String,String>{
+    val map = mutableMapOf<String,String>()
+
+    map["experience"] = experience
+    map["consultationFee"] = consultationFee
+
+    return map
+}

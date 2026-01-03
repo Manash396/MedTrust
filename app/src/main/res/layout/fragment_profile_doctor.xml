@@ -1,0 +1,728 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3sp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:contentDescription="@null"
+            android:src="@drawable/outline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="Profile"
+            android:textColor="@color/lightGreen"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+    </LinearLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/black">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <!-- ================= PROFILE HEADER ================= -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="20dp"
+                app:cardElevation="6dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_gradient"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:padding="20dp">
+
+                    <ImageView
+                        android:id="@+id/imgDoctorProfile"
+                        android:layout_width="100dp"
+                        android:layout_height="100dp"
+                        android:background="@drawable/round_white_bg"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/baseline_person_24" />
+
+                    <TextView
+                        android:id="@+id/tvName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="Dr. Lorence"
+                        android:textColor="@color/white"
+                        android:textSize="22sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/specId"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:text="Cardiologist"
+                        android:textColor="@color/lightGreen"
+                        android:textSize="14sp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="✔ Verified Doctor"
+                        android:textColor="@color/lightGreen"
+                        android:textSize="12sp" />
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ================= PERSONAL INFO ================= -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginTop="8dp"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_gradient"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/roboto"
+                        android:text="Personal Information"
+                        android:textColor="@color/white"
+                        android:textSize="16sp"
+                        android:textStyle="bold" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <!-- Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Email:"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <!-- Value -->
+                        <TextView
+                            android:id="@+id/tvEmail"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto"
+                            android:text="dr.lorence@gmail.com"
+                            android:textColor="@color/lightGreen"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <!-- Label -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Phone:"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <!-- Value -->
+                        <TextView
+                            android:id="@+id/tvPhone"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto"
+                            android:text="+91 98765 43210"
+                            android:textColor="@color/lightGreen"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ================= PROFESSIONAL INFO ================= -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_gradient"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto"
+                            android:text="Professional Details"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <!-- Cancel -->
+                        <ImageView
+                            android:id="@+id/btnCancelProfessional"
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="Cancel"
+                            android:padding="4dp"
+                            android:src="@drawable/outline_cancel_24"
+                            android:visibility="gone"
+                            app:tint="@color/white" />
+
+                        <FrameLayout
+                            android:id="@+id/layoutSaveProfess"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:id="@+id/btnEditProfessional"
+                                android:layout_width="29dp"
+                                android:layout_height="29dp"
+                                android:contentDescription="Edit"
+                                android:padding="4dp"
+                                android:src="@drawable/baseline_edit_24"
+                                app:tint="@color/white" />
+
+                            <ImageView
+                                android:id="@+id/btnSaveProfessional"
+                                android:layout_width="29dp"
+                                android:layout_height="29dp"
+                                android:contentDescription="Edit"
+                                android:padding="4dp"
+                                android:src="@drawable/baseline_save_24"
+                                android:visibility="gone"
+                                app:tint="@color/white" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBarProf"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:indeterminate="true"
+                                android:indeterminateTint="@color/lightGreen"
+                                android:visibility="gone" />
+
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Hospital:"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvHospital"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto"
+                            android:text="City Care Hospital"
+                            android:textColor="@color/lightGreen"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="8dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Specialization:"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvSpecialization"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto"
+                            android:text="Cardiology"
+                            android:textColor="@color/lightGreen"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Experience:"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tvExperience"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:fontFamily="@font/roboto"
+                                android:text="8 Years"
+                                android:textColor="@color/lightGreen"
+                                android:textSize="13sp" />
+
+                            <EditText
+                                android:id="@+id/etExperience"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/roboto"
+                                android:hint="e.g. 8 years"
+                                android:text=""
+                                android:textColor="@color/lightBlue"
+                                android:textColorHint="@color/lightBlue"
+                                android:textSize="13sp"
+                                android:visibility="gone" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="License No:"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:id="@+id/tvLicense"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto"
+                            android:text="MCI-123456"
+                            android:textColor="@color/lightGreen"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="Consultation Fee:"
+                            android:textColor="@color/white"
+                            android:textSize="13sp"
+                            android:textStyle="bold" />
+
+
+                        <FrameLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="6dp"
+                            android:layout_weight="1">
+
+                            <TextView
+                                android:id="@+id/tvConsultationFee"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:layout_weight="1"
+                                android:fontFamily="@font/roboto"
+                                android:text="₹600"
+                                android:textColor="@color/lightGreen"
+                                android:textSize="13sp" />
+
+                            <EditText
+                                android:id="@+id/etConsultationFee"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="6dp"
+                                android:background="@android:color/transparent"
+                                android:fontFamily="@font/roboto"
+                                android:hint="e.g. 250"
+                                android:inputType="number"
+                                android:text=""
+                                android:textColor="@color/lightBlue"
+                                android:textColorHint="@color/lightBlue"
+                                android:textSize="13sp"
+                                android:visibility="gone" />
+
+                        </FrameLayout>
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- ================= AVAILABILITY ================= -->
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginBottom="16dp"
+                app:cardCornerRadius="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_card_gradient"
+                    android:orientation="vertical"
+                    android:padding="16dp">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:fontFamily="@font/roboto"
+                            android:text="Availability"
+                            android:textColor="@color/white"
+                            android:textSize="16sp"
+                            android:textStyle="bold" />
+
+                        <!-- Cancel -->
+                        <ImageView
+                            android:id="@+id/btnCancelAvailability"
+                            android:layout_width="29dp"
+                            android:layout_height="29dp"
+                            android:layout_marginEnd="5dp"
+                            android:contentDescription="Cancel"
+                            android:padding="4dp"
+                            android:src="@drawable/outline_cancel_24"
+                            android:visibility="gone"
+                            app:tint="@color/white" />
+
+                        <FrameLayout
+                            android:id="@+id/layoutSaveAvailability"
+                            android:layout_width="32dp"
+                            android:layout_height="32dp"
+                            android:clickable="true"
+                            android:focusable="true">
+
+                            <ImageView
+                                android:id="@+id/btnEditAvailability"
+                                android:layout_width="29dp"
+                                android:layout_height="29dp"
+                                android:contentDescription="Edit"
+                                android:padding="4dp"
+                                android:src="@drawable/baseline_edit_24"
+                                app:tint="@color/white" />
+
+                            <ImageView
+                                android:id="@+id/btnSaveAvailability"
+                                android:layout_width="29dp"
+                                android:layout_height="29dp"
+                                android:contentDescription="Edit"
+                                android:padding="4dp"
+                                android:src="@drawable/baseline_save_24"
+                                android:visibility="invisible"
+                                app:tint="@color/white" />
+
+                            <ProgressBar
+                                android:id="@+id/progressBarAvail"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:indeterminate="true"
+                                android:indeterminateTint="@color/lightGreen"
+                                android:visibility="gone" />
+
+                        </FrameLayout>
+
+                    </LinearLayout>
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:id="@+id/availableDaysTv"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="8dp"
+                            android:text="Mon – Fri"
+                            android:paddingHorizontal="6dp"
+                            android:textColor="@color/lightGreen"
+                            android:textSize="13sp" />
+
+                        <com.google.android.material.chip.ChipGroup
+                            android:id="@+id/chipDayGroup"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:padding="4dp"
+                            android:visibility="gone"
+                            app:selectionRequired="true"
+                            app:singleSelection="false">
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipMon"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checkable="true"
+                                android:text="Mon"
+                                android:textAlignment="center"
+                                android:textColor="@color/chip_text_selector"
+                                android:textSize="13sp"
+                                app:chipBackgroundColor="@color/chip_background_selector"
+                                app:chipStrokeColor="@color/blue"
+                                app:chipStrokeWidth="1dp" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipTue"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checkable="true"
+                                android:text="Tue"
+                                android:textAlignment="center"
+                                android:textColor="@color/chip_text_selector"
+                                android:textSize="13sp"
+                                app:chipBackgroundColor="@color/chip_background_selector"
+                                app:chipStrokeColor="@color/blue"
+                                app:chipStrokeWidth="1dp" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipWed"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checkable="true"
+                                android:text="Wed"
+                                android:textAlignment="center"
+                                android:textColor="@color/chip_text_selector"
+                                android:textSize="13sp"
+                                app:chipBackgroundColor="@color/chip_background_selector"
+                                app:chipStrokeColor="@color/blue"
+                                app:chipStrokeWidth="1dp" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipThr"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checkable="true"
+                                android:text="Thu"
+                                android:textAlignment="center"
+                                android:textColor="@color/chip_text_selector"
+                                android:textSize="13sp"
+                                app:chipBackgroundColor="@color/chip_background_selector"
+                                app:chipStrokeColor="@color/blue"
+                                app:chipStrokeWidth="1dp" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipFri"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checkable="true"
+                                android:text="Fri"
+                                android:textAlignment="center"
+                                android:textColor="@color/chip_text_selector"
+                                android:textSize="13sp"
+                                app:chipBackgroundColor="@color/chip_background_selector"
+                                app:chipStrokeColor="@color/blue"
+                                app:chipStrokeWidth="1dp" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipSat"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checkable="true"
+                                android:text="Sat"
+                                android:textAlignment="center"
+                                android:textColor="@color/chip_text_selector"
+                                android:textSize="13sp"
+                                app:chipBackgroundColor="@color/chip_background_selector"
+                                app:chipStrokeColor="@color/blue"
+                                app:chipStrokeWidth="1dp" />
+
+                            <com.google.android.material.chip.Chip
+                                android:id="@+id/chipSun"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checkable="true"
+                                android:text="Sun"
+                                android:textAlignment="center"
+                                android:textColor="@color/chip_text_selector"
+                                android:textSize="13sp"
+                                app:chipBackgroundColor="@color/chip_background_selector"
+                                app:chipStrokeColor="@color/blue"
+                                app:chipStrokeWidth="1dp" />
+
+                        </com.google.android.material.chip.ChipGroup>
+
+
+                    </FrameLayout>
+
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!-- Start Time -->
+                        <TextView
+                            android:id="@+id/tvStartTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="10:00 AM"
+                            android:paddingVertical="4dp"
+                            android:paddingHorizontal="6dp"
+                            android:textColor="@color/lightGreen"
+                            android:textSize="13sp" />
+
+                        <!-- Dash -->
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="  –  "
+                            android:textColor="@color/lightGreen"
+                            android:textSize="13sp" />
+
+                        <!-- End Time -->
+                        <TextView
+                            android:id="@+id/tvEndTime"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
+                            android:text="2:00 PM"
+                            android:paddingVertical="4dp"
+                            android:paddingHorizontal="6dp"
+                            android:textColor="@color/lightGreen"
+                            android:textSize="13sp" />
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <!-- Logout -->
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="24dp"
+                android:backgroundTint="#E53935"
+                android:fontFamily="@font/roboto"
+                android:text="@string/log_out"
+                android:textAllCaps="false"
+                android:textColor="@android:color/white"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent" />
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+</LinearLayout>

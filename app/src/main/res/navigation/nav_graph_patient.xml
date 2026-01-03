@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph_patient"
+    app:startDestination="@+id/homeFragment"
+    >
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.mk.medtrust.patient.ui.fragment.HomeFragmentP"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/homeFragment_to_doctorListFragment"
+            app:destination="@+id/doctorListFragment"
+            />
+        <action
+            android:id="@+id/homeFragment_to_patientProfile"
+            app:destination="@+id/patientProfile"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/doctorListFragment"
+        android:name="com.mk.medtrust.patient.ui.fragment.DoctorListFragment"
+        tools:layout="@layout/fragment_doctor_list">
+
+        <action
+            android:id="@+id/doctorListFragment_to_doctorDetailFragment"
+            app:destination="@+id/doctorDetailFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/patientProfile"
+        android:name="com.mk.medtrust.patient.ui.fragment.ProfilePatientFragment"
+        tools:layout="@layout/fragment_profile_patient"
+        >
+
+        <action
+            android:id="@+id/patientProfile_to_editFragment"
+            app:destination="@+id/editPatientProfileFragment"
+            />
+
+    </fragment>
+    <fragment
+        android:id="@+id/editPatientProfileFragment"
+        android:name="com.mk.medtrust.patient.ui.fragment.EditPatientProfileFragment"
+        tools:layout="@layout/fragment_edit_patient_profile"
+        />
+
+    <fragment
+        android:id="@+id/doctorDetailFragment"
+        android:name="com.mk.medtrust.patient.ui.fragment.DoctorDetailsFragment"
+        tools:layout="@layout/fragment_doctor_details"/>
+
+</navigation>

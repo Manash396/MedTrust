@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@+id/loginFragment"
+    android:id="@+id/nav_graph_auth">
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.mk.medtrust.auth.ui.fragment.LoginFragment"
+        android:label="Login"
+        tools:layout="@layout/fragment_login"
+        >
+
+        <action
+            android:id="@+id/action_login_to_patient"
+            app:destination="@+id/patientRegister"
+            />
+
+        <action
+            android:id="@+id/action_login_to_doctor"
+            app:destination="@+id/doctorRegister"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/patientRegister"
+        android:name="com.mk.medtrust.auth.ui.fragment.PatientRegistration"
+        android:label="Patient" />
+
+    <fragment
+        android:id="@+id/doctorRegister"
+        android:name="com.mk.medtrust.auth.ui.fragment.DoctorRegistration"
+        android:label="Doctor" />
+
+
+</navigation>
