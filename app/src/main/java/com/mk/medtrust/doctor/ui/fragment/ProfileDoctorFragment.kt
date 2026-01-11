@@ -13,6 +13,8 @@ import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipGroup
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.timepicker.MaterialTimePicker
 import com.google.android.material.timepicker.TimeFormat
@@ -22,7 +24,9 @@ import com.mk.medtrust.databinding.FragmentProfileDoctorBinding
 import com.mk.medtrust.doctor.model.Doctor
 import com.mk.medtrust.doctor.ui.viewmodel.DoctorViewModel
 import com.mk.medtrust.util.AppConstant
+import com.mk.medtrust.util.AvailabilityPrefs
 import com.mk.medtrust.util.Result
+import com.mk.medtrust.util.UtilObject
 import com.yourpackage.app.AppPreferences
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -35,7 +39,8 @@ class ProfileDoctorFragment : Fragment() {
 
     private val viewModel: DoctorViewModel by activityViewModels()
 
-    private var doctorUpdated: Doctor? = null
+    private var doctorUpdatedC: Doctor? = null
+    private var availabilityUpdatedC: Doctor.Availability? = null
     private var isDoctorPDetailEditing = false
     private var isDoctorAvailEditing = false
     private lateinit var context: Context
@@ -88,12 +93,12 @@ class ProfileDoctorFragment : Fragment() {
                     binding.btnEditProfessional.visibility = View.VISIBLE
                     binding.tvConsultationFee.visibility = View.VISIBLE
 
-                    doctorUpdated?.let {
+                    doctorUpdatedC?.let {
                         AppPreferences.setString(AppConstant.EXP, it.experience)
                         AppPreferences.setString(AppConstant.FEE, it.consultationFee)
                         bindDoctorProfile()
                     }
-                    doctorUpdated = null
+                    doctorUpdatedC = null
                 }
 
                 is Result.Loading -> {
@@ -108,7 +113,34 @@ class ProfileDoctorFragment : Fragment() {
                     binding.tvConsultationFee.visibility = View.VISIBLE
 
                     showOkDialog(result.message)
-                    doctorUpdated = null
+                    doctorUpdatedC = null
+                }
+            }
+        }
+
+        viewModel.availabilityUpdateState.observe(viewLifecycleOwner){result ->
+            when(result){
+                is Result.Success ->{
+                    binding.progressBarAvail.visibility = View.GONE
+                    binding.availableDaysTv.visibility = View.VISIBLE
+                    binding.btnEditAvailability.visibility = View.VISIBLE
+
+                    // saving in preferences
+                    availabilityUpdatedC?.let {
+                        AvailabilityPrefs.saveDoctorAvailability(it)
+                        bindDoctorProfile()
+                    }
+                    availabilityUpdatedC = null
+                }
+                is Result.Loading -> {
+                    binding.progressBarAvail.visibility = View.VISIBLE
+                }
+                is Result.Error -> {
+                    binding.progressBarAvail.visibility = View.GONE
+
+                    binding.availableDaysTv.visibility = View.VISIBLE
+                    binding.btnEditAvailability.visibility = View.VISIBLE
+                    availabilityUpdatedC = null
                 }
             }
         }
@@ -186,6 +218,9 @@ class ProfileDoctorFragment : Fragment() {
                 btnEditAvailability.visibility = View.GONE
                 availableDaysTv.visibility = View.GONE
 
+                // check the chips for available days
+                editModeChipDays(binding.availableDaysTv.text.toString())
+
                 chipDayGroup.visibility = View.VISIBLE
                 btnCancelAvailability.visibility = View.VISIBLE
                 btnSaveAvailability.visibility = View.VISIBLE
@@ -207,11 +242,40 @@ class ProfileDoctorFragment : Fragment() {
             isDoctorAvailEditing = true
         } else {
             with(binding) {
-//      saving will be done here
-                availableDaysTv.visibility = View.VISIBLE
-                btnCancelAvailability.visibility = View.GONE
-                btnEditAvailability.visibility = View.VISIBLE
+          //      saving will be done here
 
+                val list = getListOfDays(binding.chipDayGroup)
+                val startTime = binding.tvStartTime.text.toString().trim()
+                val endTime  = binding.tvEndTime.text.toString().trim()
+
+                if (startTime.isEmpty() || endTime.isEmpty()) {
+                    showOkDialog("Please select both start and end time")
+                    return
+                }
+
+                val startMinutes = UtilObject.timeToMinutes(startTime)
+                val endMinutes = UtilObject.timeToMinutes(endTime)
+
+                if (endMinutes <= startMinutes) {
+                    showOkDialog("End time must be after start time")
+                    return
+                }
+
+                if (endMinutes - startMinutes < 30) {
+                    showOkDialog("Time difference must be at least 30 minutes")
+                    return
+                }
+
+
+                val availability = Doctor.Availability(
+                    list ,
+                    startTime,
+                    endTime
+                )
+                availabilityUpdatedC = availability
+                updateDoctorAvailDetails(availability)
+
+                btnCancelAvailability.visibility = View.GONE
                 chipDayGroup.visibility = View.GONE
                 btnSaveAvailability.visibility = View.GONE
 
@@ -231,6 +295,39 @@ class ProfileDoctorFragment : Fragment() {
         }
     }
 
+    private fun updateDoctorAvailDetails(av : Doctor.Availability){
+        viewModel.updateDoctorAvailability(av)
+    }
+
+    private fun editModeChipDays(list : String){
+        val selectedDays = parseDays(list)
+
+        for(i in 0 until binding.chipDayGroup.childCount){
+            val chip  = binding.chipDayGroup.getChildAt(i) as Chip
+            chip.isChecked = selectedDays.contains(chip.text.toString())
+        }
+    }
+
+    fun parseDays(daysText: String): List<String> {
+        return daysText
+            .removePrefix("[")
+            .removeSuffix("]")
+            .split(",")
+            .map { it.trim() }
+    }
+
+    private fun getListOfDays(chipGroup: ChipGroup): List<String> {
+        val selectedDays = mutableListOf<String>()
+
+        for (chipId in chipGroup.checkedChipIds) {
+            val chip = chipGroup.findViewById<Chip>(chipId)
+            selectedDays.add(chip.text.toString())
+        }
+
+        return selectedDays
+    }
+
+
     private fun updatingProfessionalDetail() {
         if (!isDoctorPDetailEditing) {
             binding.btnEditProfessional.visibility = View.GONE
@@ -244,7 +341,9 @@ class ProfileDoctorFragment : Fragment() {
             binding.btnCancelProfessional.visibility = View.VISIBLE
 
             with(binding) {
-                etExperience.setText(tvExperience.text.toString())
+                etExperience.setText(tvExperience.text.toString().replace(
+                    Regex("[^0-9]") ,""
+                ))
                 etConsultationFee.setText(
                     tvConsultationFee.text.toString().replace(Regex("[^0-9]"), "")
                 )
@@ -253,7 +352,7 @@ class ProfileDoctorFragment : Fragment() {
             isDoctorPDetailEditing = true
         } else {
             // editing i s going on clicking to save the edit
-            val exp = binding.etExperience.text.toString().trim()
+            val exp = binding.etExperience.text.toString().trim() + " yrs"
             val consultation = binding.etConsultationFee.text.toString().trim()
 
             updateDoctorProfDetails(exp, consultation)
@@ -277,7 +376,7 @@ class ProfileDoctorFragment : Fragment() {
             experience = exp,
             consultationFee = "₹$consFee"
         )
-        doctorUpdated = doctor
+        doctorUpdatedC = doctor
         viewModel.updateDoctorProfDetails(doctor)
     }
 
@@ -312,6 +411,14 @@ class ProfileDoctorFragment : Fragment() {
 
             // Consultation Fee
             binding.tvConsultationFee.text = AppPreferences.getString(AppConstant.FEE)
+
+            // hospital name
+            binding.tvHospital.text = AppPreferences.getString(AppConstant.HOSPITAL)
+
+            val av = AvailabilityPrefs.getDoctorAvailability()
+            binding.availableDaysTv.text = av.days.toString()
+            binding.tvStartTime.text = av.startTime
+            binding.tvEndTime.text = av.endTime
         }
     }
 
@@ -372,3 +479,5 @@ class ProfileDoctorFragment : Fragment() {
         _binding = null
     }
 }
+
+

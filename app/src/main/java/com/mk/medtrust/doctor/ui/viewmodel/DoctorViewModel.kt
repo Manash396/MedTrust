@@ -25,7 +25,8 @@ class DoctorViewModel @Inject constructor(
     private val _profileUpdateState = MutableLiveData<com.mk.medtrust.util.Result<String>>()
     val profileUpdateState : LiveData<Result<String>> get() = _profileUpdateState
 
-
+    private val _availabilityUpdateState = MutableLiveData<com.mk.medtrust.util.Result<String>>()
+    val availabilityUpdateState : LiveData<Result<String>> get() = _availabilityUpdateState
     fun updateDoctorProfDetails(doctor: Doctor){
         viewModelScope.launch {
             _profileUpdateState.value = Result.Loading
@@ -36,6 +37,13 @@ class DoctorViewModel @Inject constructor(
         viewModelScope.launch {
             _doctorDetailState.value = Result.Loading
             _doctorDetailState.value = repo.getDoctorDetails(uid)
+        }
+    }
+
+    fun updateDoctorAvailability(av : Doctor.Availability){
+        viewModelScope.launch {
+            _availabilityUpdateState.value = Result.Loading
+            _availabilityUpdateState.value = repo.updateDoctorAvailability(av)
         }
     }
 

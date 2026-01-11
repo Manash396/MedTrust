@@ -18,6 +18,7 @@ import com.mk.medtrust.databinding.FragmentHomeDBinding
 import com.mk.medtrust.doctor.model.Doctor
 import com.mk.medtrust.doctor.ui.viewmodel.DoctorViewModel
 import com.mk.medtrust.util.AppConstant
+import com.mk.medtrust.util.AvailabilityPrefs
 import com.mk.medtrust.util.Result
 import com.yourpackage.app.AppPreferences
 import dagger.hilt.android.AndroidEntryPoint
@@ -85,6 +86,9 @@ class HomeFragmentD : Fragment() {
         AppPreferences.setString(AppConstant.RATEN,doctor.rateNo)
         AppPreferences.setString(AppConstant.LISC,doctor.medicalLicenseNo)
         AppPreferences.setString(AppConstant.FEE,doctor.consultationFee)
+        AppPreferences.setString(AppConstant.HOSPITAL,doctor.hospital)
+
+        AvailabilityPrefs.saveDoctorAvailability(doctor.availability)
     }
     private fun showOkDialog(message: String) {
         val dialog = MaterialAlertDialogBuilder(requireContext())

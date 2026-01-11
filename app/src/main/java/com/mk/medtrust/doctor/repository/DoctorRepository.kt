@@ -47,6 +47,25 @@ class DoctorRepository @Inject constructor(
         }
     }
 
+    suspend fun updateDoctorAvailability(
+        availability: Doctor.Availability
+    ): Result<String> {
+        return try {
+            val uid = auth.currentUser?.uid
+                ?: return Result.Error("User not logged in")
+
+            storeDB.collection("doctors")
+                .document(uid)
+                .update("availability", availability)
+                .await()
+
+            Result.Success("Availability updated successfully")
+        } catch (e: Exception) {
+            Result.Error(e.message ?: "Failed to update availability")
+        }
+    }
+
+
     suspend fun logout() : Result<String>{
         return try {
             auth.signOut()

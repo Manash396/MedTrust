@@ -4,6 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.mk.medtrust.doctor.model.Doctor
 import com.mk.medtrust.patient.model.Patient
 import com.mk.medtrust.patient.model.toMap
 import com.mk.medtrust.util.Result
@@ -18,9 +19,22 @@ class PatientRepository @Inject constructor(
     private val auth: FirebaseAuth
 )  {
 
-    private var _updateState  = MutableLiveData<Result<String>>()
-    val updateState : LiveData<Result<String>>  = _updateState
 
+    suspend fun getDoctorList() : Result<List<Doctor>>{
+        return try {
+            val snapshot = storeDb.collection("doctors")
+                .get()
+                .await()
+
+            val doctor = snapshot.documents.mapNotNull { doc ->
+                doc.toObject(Doctor::class.java)
+            }
+
+            Result.Success(doctor)
+        }catch (e : Exception){
+            Result.Error(e.message ?: "Failed to fetch Doctor List")
+        }
+    }
     suspend fun logout() : Result<String>{
         return try {
             auth.signOut()

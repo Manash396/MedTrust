@@ -53,6 +53,12 @@
     <fragment
         android:id="@+id/doctorDetailFragment"
         android:name="com.mk.medtrust.patient.ui.fragment.DoctorDetailsFragment"
-        tools:layout="@layout/fragment_doctor_details"/>
+        tools:layout="@layout/fragment_doctor_details">
+
+        <argument
+            android:name="doctor"
+            app:argType="com.mk.medtrust.doctor.model.Doctor"
+            />
+    </fragment>
 
 </navigation>

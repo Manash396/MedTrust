@@ -19,3 +19,19 @@ fun Patient.toMap(): Map<String, String> {
 
     return map
 }
+
+
+data class DateItem(
+    val dayOfWeek: String,
+    val dayOfMonth: Int,
+    val monthOfYear:Int,
+    val year : Int,
+    val isAvailable: Boolean,
+    var isSelected: Boolean = false
+)
+
+data class SlotItem(
+    val time : String,
+    val isAvailable : Boolean,
+    var isSelected: Boolean = false
+)

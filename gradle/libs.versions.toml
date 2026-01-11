@@ -50,4 +50,10 @@ google-gms-google-services = { id = "com.google.gms.google-services", version.re
 ksp = { id = "com.google.devtools.ksp" , version.ref = "ksp"}
 hilt-android = { id = 'com.google.dagger.hilt.android' , version.ref = "hilt"}
 
+# Safe Args
+androidx-navigation-safeargs = { id = "androidx.navigation.safeargs.kotlin", version = "2.7.7" }
+
+# Kotlin Parcelize
+kotlin-parcelize = { id = "kotlin-parcelize" }
+
 

@@ -104,6 +104,7 @@ class DoctorRegistration : Fragment(), OptionCLickListener {
             etSpecializationLayout.clearErrorOnType()
             etPasswordLayout.clearErrorOnType()
             etConfirmPasswordLayout.clearErrorOnType()
+            etHospitalLayout.clearErrorOnType()
         }
     }
     private fun setUpOnclick() {
@@ -133,7 +134,8 @@ class DoctorRegistration : Fragment(), OptionCLickListener {
             email = binding.etEmail.text.toString().trim(),
             contact = binding.etPhone.text.toString().trim(),
             medicalLicenseNo = binding.etLicense.text.toString().trim(),
-            specialisation = binding.etSpecialization.text.toString().trim()
+            specialisation = binding.etSpecialization.text.toString().trim(),
+            hospital = binding.etHospital.text.toString().trim()
         )
 
         viewModel.registerDoctor(doctor,binding.etPassword.text.toString().trim())
@@ -171,6 +173,7 @@ class DoctorRegistration : Fragment(), OptionCLickListener {
             val confirmPassword = etConfirmPassword.text.toString().trim()
             val license = etLicense.text.toString().trim()
             val specialise = etSpecialization.text.toString().trim()
+            val hospital = etHospital.text.toString().trim()
             val phone = etPhone.text.toString().trim()
 
             // Full Name
@@ -203,6 +206,12 @@ class DoctorRegistration : Fragment(), OptionCLickListener {
             // Specialisation
             if (specialise.isEmpty()) {
                 etSpecializationLayout.error = "Select specialisation"
+                return false
+            } else etSpecializationLayout.error = null
+
+            // Hospital
+            if (hospital.isEmpty()) {
+                etSpecializationLayout.error = "Field Required"
                 return false
             } else etSpecializationLayout.error = null
 
