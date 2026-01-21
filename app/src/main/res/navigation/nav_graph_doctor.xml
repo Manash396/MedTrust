@@ -15,7 +15,18 @@
             android:id="@+id/homeFragment_to_doctorProfileFragment"
             app:destination="@+id/doctorProfileFragment"
             />
+        <action
+            android:id="@+id/homeFragment_to_appointmentListCurFragment"
+            app:destination="@+id/appointmentListCurFragment"
+            />
+
     </fragment>
+
+    <fragment
+        android:id="@+id/appointmentListCurFragment"
+        android:name="com.mk.medtrust.doctor.ui.fragment.AppointmentListCurFragment"
+        tools:layout="@layout/fragment_appointment_list_cur"
+        />
 
     <fragment
         android:id="@+id/doctorProfileFragment"

@@ -32,6 +32,7 @@ data class DateItem(
 
 data class SlotItem(
     val time : String,
+    val dateId : String = "",
     val isAvailable : Boolean,
     var isSelected: Boolean = false
 )

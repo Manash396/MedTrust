@@ -1,7 +1,9 @@
 package com.mk.medtrust.doctor.repository
 
+import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
+import com.mk.medtrust.auth.data.model.Appointment
 import com.mk.medtrust.doctor.model.Doctor
 import com.mk.medtrust.doctor.model.toMap
 import com.mk.medtrust.util.Result
@@ -62,6 +64,38 @@ class DoctorRepository @Inject constructor(
             Result.Success("Availability updated successfully")
         } catch (e: Exception) {
             Result.Error(e.message ?: "Failed to update availability")
+        }
+    }
+
+    suspend fun getAllAppointments(doctorId : String) : Result<List<Appointment>> {
+        return try {
+            val allAppointments  = mutableListOf<Appointment>()
+
+            val dateSnapshot = storeDB.collection("doctors")
+                .document(doctorId)
+                .collection("bookings")
+                .get()
+                .await()
+
+            Log.d("Krishna",dateSnapshot.toString())
+
+            for(dateDoc in dateSnapshot.documents){
+
+                val appointmentSnapshot = storeDB.collection("doctors")
+                    .document(doctorId)
+                    .collection("bookings")
+                    .document(dateDoc.id)
+                    .collection("appointments")
+                    .get().await()
+
+                allAppointments.addAll(
+                    appointmentSnapshot.toObjects(Appointment::class.java)
+                )
+            }
+
+            Result.Success(allAppointments)
+        }catch (e : Exception){
+            Result.Error(e.message ?: "Failed to fetch bookings")
         }
     }
 

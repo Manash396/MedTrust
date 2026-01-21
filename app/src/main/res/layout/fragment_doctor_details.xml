@@ -22,6 +22,7 @@
 
     <!-- SCROLLABLE CONTENT -->
     <androidx.core.widget.NestedScrollView
+        android:id="@+id/contentView"
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:paddingHorizontal="6dp"
@@ -241,5 +242,16 @@
             app:iconPadding="8dp"
             app:rippleColor="@color/lightBlue"/>
     </LinearLayout>
+
+    <!-- Progress Bar Overlay -->
+    <include
+        android:id="@+id/progressAnim"
+        layout="@layout/progress_layout"
+        android:visibility="gone"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

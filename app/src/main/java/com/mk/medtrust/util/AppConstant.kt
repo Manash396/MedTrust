@@ -11,6 +11,8 @@ object AppConstant {
         "Male" , "Female" ,"Other"
     )
 
+
+
     val GENDER = "gender"
     val EMAIL = "email"
     val USERNAME = "userName"

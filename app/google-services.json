@@ -1,13 +1,13 @@
 {
   "project_info": {
-    "project_number": "230195744252",
-    "project_id": "medtrust-105ad",
-    "storage_bucket": "medtrust-105ad.firebasestorage.app"
+    "project_number": "424825373333",
+    "project_id": "medtrust-3ca61",
+    "storage_bucket": "medtrust-3ca61.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:230195744252:android:4949bfa8f51087646ef679",
+        "mobilesdk_app_id": "1:424825373333:android:4b4aa91c773c4bdee3119c",
         "android_client_info": {
           "package_name": "com.mk.medtrust"
         }
@@ -15,7 +15,7 @@
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyAp-FXet1_TfE2_3lWFBrSUDuOuIX1efIE"
+          "current_key": "AIzaSyBQ1ObB50-gIT3W4HRRjF3Pp7DoQReORLs"
         }
       ],
       "services": {
