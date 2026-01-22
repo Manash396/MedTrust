@@ -35,14 +35,14 @@ class DoctorSharedViewModel @Inject constructor(
         Log.d("mse",now.toString())
 
         return list.filter {
-            it.toLocalDateTime().isAfter(now.minusMinutes(10))
+            it.toLocalDateTime().isAfter(now.minusMinutes(25))
         }
     }
 
     private fun historyAppointment(list: List<Appointment>): List<Appointment>{
         val now = LocalDateTime.now()
         return list.filter {
-            it.toLocalDateTime().isBefore(now.minusMinutes(10)) && AppointmentStatus.COMPLETED == it.status
+            it.toLocalDateTime().isBefore(now.minusMinutes(25)) && AppointmentStatus.COMPLETED == it.status
         }
     }
 

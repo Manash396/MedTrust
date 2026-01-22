@@ -31,15 +31,15 @@ class AppointmentAdapter(
             val now = LocalDateTime.now()
             val appointmentTime = ap.toLocalDateTime()
 
-            val isWithin5Minutes =
+            val isWithin30Minutes =
                 now.isAfter(appointmentTime.minusMinutes(5)) &&
-                        now.isBefore(appointmentTime.plusMinutes(10))
+                        now.isBefore(appointmentTime.plusMinutes(25))
 
-            tvStatus.visibility = if (isWithin5Minutes) View.VISIBLE else View.GONE
-            val isWithin10min =  now.isAfter(appointmentTime.minusMinutes(1)) && now.isBefore(appointmentTime.plusMinutes(10))
+            tvStatus.visibility = if (isWithin30Minutes) View.VISIBLE else View.GONE
+            val isWithin26min =  now.isAfter(appointmentTime.minusMinutes(1)) && now.isBefore(appointmentTime.plusMinutes(25))
             btnStart.apply {
-                isEnabled = isWithin10min
-                alpha  = if (isWithin10min) 1f else 0.3f
+                isEnabled = isWithin26min
+                alpha  = if (isWithin26min) 1f else 0.3f
             }
         }
     }

@@ -1,15 +1,19 @@
 package com.mk.medtrust.patient.ui.fragment
 
 import android.content.Intent
+import android.graphics.Color
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContract
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.constraintlayout.helper.widget.Grid
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.navigation.NavArgs
@@ -193,7 +197,30 @@ class DoctorDetailsFragment : Fragment() {
             updateNewList(datesAvailable as MutableList<DateItem>)
         }
 
+        // availability shown here
+        showAvailabilityDays(binding.availabilityContainer ,  doctor.availability.days)
 
+    }
+
+    private fun showAvailabilityDays(container: LinearLayout, days: List<String>) {
+        container.removeAllViews()
+
+        days.forEach {day ->
+            val tv  = TextView(container.context).apply {
+                text = day
+                setTextColor(Color.WHITE)
+                textSize =  12f
+                setPadding(24, 12, 24, 12)
+                background = ContextCompat.getDrawable(container.context , R.drawable.availability_day_bg)
+                val params = LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+                )
+                params.marginEnd = 12
+                layoutParams = params
+            }
+            container.addView(tv)
+        }
     }
 
     private fun setUpOnclickListener() {

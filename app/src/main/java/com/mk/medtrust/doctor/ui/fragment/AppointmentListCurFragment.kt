@@ -77,6 +77,7 @@ class AppointmentListCurFragment : Fragment() {
 
                 val dateId = "${dateItem.dayOfMonth}_${dateItem.monthOfYear}_${dateItem.year}"
                 val newList = appointmentMapByDate[dateId] ?: emptyList()
+                noAppointmentFound.visibility = if(newList.isEmpty()) View.VISIBLE else View.GONE
                 appointmentAdapter.updateNewList(newList)
             }
             dateRecyclerView.adapter = dateAdapter.apply {

@@ -147,6 +147,25 @@
                 android:text="Dr. Sarah Wilson is a highly experienced cardiologist with over 10 years of expertise in treating heart diseases."
                 android:textColor="@color/white"/>
 
+            <!-- Availability -->
+            <TextView
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Availability"
+                android:textStyle="bold"
+                android:fontFamily="@font/roboto"
+                android:textColor="@color/lightGreen"
+                android:textSize="16sp"/>
+
+            <LinearLayout
+                android:id="@+id/availabilityContainer"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="3dp"
+                android:orientation="horizontal"
+                />
+
             <!-- Select Date -->
             <TextView
                 android:layout_height="wrap_content"

@@ -82,32 +82,25 @@
                     android:textColor="@color/lightGreen"
                     android:textSize="12sp" />
 
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=" • "
+                    android:textColor="@color/lightGreen"
+                    android:textSize="12sp" />
 
-            </LinearLayout>
-
-            <LinearLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal">
 
                 <TextView
                     android:id="@+id/tvAvailability"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Available on "
+                    android:text="Available Today"
                     android:textColor="@color/lightGreen"
                     android:textSize="12sp" />
 
-                <TextView
-                    android:id="@+id/tvAvailabilityDays"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text=""
-                    android:textColor="@color/lightGreen"
-                    android:textSize="11sp" />
-
 
             </LinearLayout>
+
 
         </LinearLayout>
 

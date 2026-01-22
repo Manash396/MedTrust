@@ -1,10 +1,14 @@
 package com.mk.medtrust.patient.ui.adapter
 
 import android.view.LayoutInflater
+import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.mk.medtrust.databinding.ItemDoctorBinding
 import com.mk.medtrust.doctor.model.Doctor
+import java.time.LocalDate
+import java.time.format.TextStyle
+import java.util.Locale
 
 class DoctorListAdapter(
     private val callback: (Doctor) -> Unit
@@ -23,8 +27,10 @@ class DoctorListAdapter(
                 tvSpecialization.text = doctor.specialisation
 
                 tvRating.text = doctor.rating
-                tvAvailabilityDays.text = doctor.availability.days.toString().removePrefix("[")
-                    .removeSuffix("]")
+
+                val todayDay = LocalDate.now().dayOfWeek.getDisplayName(TextStyle.SHORT, Locale.ENGLISH).uppercase()
+                tvAvailability.text = if (doctor.availability.days.contains(todayDay)) "Available Today"
+                else "Not Available Today"
 
                 root.setOnClickListener {
                     callback(doctor)
