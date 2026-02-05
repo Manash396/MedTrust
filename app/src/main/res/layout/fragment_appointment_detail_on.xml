@@ -1,0 +1,500 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black"
+    android:fitsSystemWindows="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="3dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="5dp"
+            android:contentDescription="@null"
+            android:src="@drawable/outline_arrow_back_24" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="Appointments Details"
+            android:textColor="@color/lightGreen"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <View
+            android:layout_width="24dp"
+            android:layout_height="24dp"/>
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        >
+
+        <LinearLayout
+            android:id="@+id/shimmerLoadingSkeleton"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <include layout="@layout/fragment_appt_detail_d_skeleton"/>
+
+        </LinearLayout>
+
+
+        <androidx.core.widget.NestedScrollView
+            android:id="@+id/contentView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:padding="16dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="4dp">
+
+                    <LinearLayout
+                        android:background="@color/deepGreen"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="16dp"
+                        android:orientation="horizontal">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="PATIENT"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/roboto"
+                                android:textSize="13sp"
+                                />
+
+                            <TextView
+                                android:id="@+id/namePatient"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Sarah Wilson"
+                                android:textColor="@color/white"
+                                android:fontFamily="@font/roboto"
+                                android:textStyle="bold"
+                                android:textSize="19sp"/>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                android:gravity="center_vertical">
+
+                                <ImageView
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:src="@drawable/baseline_person_24"
+                                    app:tint="@color/white" />
+
+                                <TextView
+                                    android:id="@+id/gender"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text="Male"
+                                    android:textColor="@color/white"
+                                    android:fontFamily="@font/roboto"
+                                    android:textSize="13sp"
+                                    android:layout_marginStart="8dp" />
+
+                                <TextView
+                                    android:id="@+id/Age"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:text=", 23 years old"
+                                    android:fontFamily="@font/roboto"
+                                    android:textColor="@color/white"
+                                    android:textSize="13sp"
+                                    />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="72dp"
+                            android:layout_height="72dp"
+                            android:src="@drawable/baseline_person_24"
+                            android:background="@drawable/round_white_bg"/>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnVideoCall"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/lightGreen"
+                        android:fontFamily="@font/roboto"
+                        android:text="Start a Video Call"
+                        android:layout_marginTop="18dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/deepGreen"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        app:icon="@drawable/outline_videocam_24"
+                        app:iconTint="@color/black"
+                        app:iconSize="25dp"
+                        app:iconGravity="textStart"
+                        />
+
+                    <com.google.android.material.button.MaterialButton
+                        android:id="@+id/btnCompletedAppointment"
+                        android:enabled="true"
+                        android:clickable="false"
+                        android:focusable="false"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:backgroundTint="@color/deepGreen"
+                        android:fontFamily="@font/roboto"
+                        android:text="Appointment Completed "
+                        android:layout_marginTop="18dp"
+                        android:textAllCaps="false"
+                        android:textColor="@color/lightVeryGreen"
+                        android:textStyle="bold"
+                        android:textSize="16sp"
+                        app:icon="@drawable/ic_tick_mark"
+                        app:iconTint="@null"
+                        app:iconGravity="textStart"
+                        android:visibility="invisible"
+                        />
+
+
+                </FrameLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center_vertical">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/outline_notes_24"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="CLINICAL NOTES"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="19sp"
+                        android:layout_marginStart="8dp" />
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp">
+
+                    <EditText
+                        android:id="@+id/doctorNotesEdit"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Enter diagonsis and clinical findings..."
+                        android:textColorHint="@color/lightVeryGreen"
+                        android:background="@color/deepGreen"
+                        android:maxLines="6"
+                        android:padding="6dp"
+                        android:textSize="14sp"
+                        android:minHeight="120dp"
+                        android:gravity="top|start"
+                        android:textColor="@color/white"
+                        >
+
+                    </EditText>
+
+                </androidx.cardview.widget.CardView>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18dp"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="24dp"
+                        android:layout_height="24dp"
+                        android:src="@drawable/baseline_medical_services_24"
+                        app:tint="@color/white" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="8dp"
+                        android:fontFamily="@font/roboto"
+                        android:text="MEDICINES"
+                        android:textColor="@color/white"
+                        android:textSize="19sp" />
+                </LinearLayout>
+
+                <!-- Medicine -->
+
+                <LinearLayout
+                    android:id="@+id/medicineContainer"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    >
+
+                </LinearLayout>
+
+                <androidx.cardview.widget.CardView
+                    android:layout_marginTop="8dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:background="@drawable/bg_dotted_stroke"
+                        >
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="ADD NEW MEDICATION"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/roboto"
+                            android:textSize="13sp"
+                            android:layout_marginStart="8dp" />
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginVertical="8dp"
+                            app:cardCornerRadius="8dp"
+                            app:cardElevation="0dp"
+                            app:cardBackgroundColor="@color/deepGreen"
+                            app:strokeColor="@color/lightVeryGreen"
+                            app:strokeWidth="1dp">
+
+                            <EditText
+                                android:id="@+id/medicineName"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:hint="Medicine Name (e.g. Paracetamol)"
+                                android:textColorHint="@color/lightVeryGreen"
+                                android:singleLine="true"
+                                android:maxLines="1"
+                                android:ellipsize="none"
+                                android:background="@color/deepGreen"
+                                android:padding="8dp"
+                                android:textSize="12sp"
+                                android:gravity="center_vertical"
+                                android:scrollHorizontally="true"
+                                android:textColor="@color/white"
+                                />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginVertical="8dp"
+                            android:weightSum="2"
+                            >
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp"
+                                app:cardBackgroundColor="@color/deepGreen"
+                                app:strokeColor="@color/lightVeryGreen"
+                                android:layout_weight="1"
+                                app:strokeWidth="1dp">
+
+                                <EditText
+                                    android:id="@+id/medicineDose"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Dose (e.g. 500mg)"
+                                    android:textColorHint="@color/lightVeryGreen"
+                                    android:singleLine="true"
+                                    android:maxLines="1"
+                                    android:ellipsize="none"
+                                    android:background="@color/deepGreen"
+                                    android:padding="8dp"
+                                    android:textSize="12sp"
+                                    android:gravity="center_vertical"
+                                    android:scrollHorizontally="true"
+                                    android:textColor="@color/white"
+                                    />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                            <View
+                                android:layout_width="8sp"
+                                android:layout_height="match_parent"/>
+
+                            <com.google.android.material.card.MaterialCardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                app:cardCornerRadius="8dp"
+                                app:cardElevation="0dp"
+                                app:cardBackgroundColor="@color/deepGreen"
+                                app:strokeColor="@color/lightVeryGreen"
+                                android:layout_weight="1"
+                                app:strokeWidth="1dp">
+
+                                <EditText
+                                    android:id="@+id/frequency"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:hint="Frequency (e.g. 2 times a day)"
+                                    android:textColorHint="@color/lightVeryGreen"
+                                    android:singleLine="true"
+                                    android:maxLines="1"
+                                    android:ellipsize="none"
+                                    android:background="@color/deepGreen"
+                                    android:padding="8dp"
+                                    android:textSize="12sp"
+                                    android:gravity="center_vertical"
+                                    android:scrollHorizontally="true"
+                                    android:textColor="@color/white"
+                                    />
+
+                            </com.google.android.material.card.MaterialCardView>
+
+                        </LinearLayout>
+
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/btnAddMedicine"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginHorizontal="16dp"
+                            android:layout_marginVertical="8dp"
+                            android:backgroundTint="@color/lightGreenTransparent"
+                            android:fontFamily="@font/roboto"
+                            android:text="Add to List"
+                            android:layout_marginTop="18dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/lightGreen"
+                            android:textStyle="bold"
+                            android:textSize="13sp"
+                            app:icon="@drawable/baseline_add_24"
+                            app:iconTint="@color/lightGreen"
+                            app:iconGravity="textStart"
+
+                            app:strokeColor="@color/lightGreen"
+                            app:strokeWidth="1.5dp"
+                            app:cornerRadius="8dp"
+                            />
+
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:cardCornerRadius="20dp"
+                    android:layout_marginTop="18dp"
+                    android:backgroundTint="@color/deepGreen"
+                    app:cardElevation="0dp">
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center_vertical"
+                        android:padding="6dp"
+                        android:orientation="horizontal">
+
+                        <ImageView
+                            android:layout_width="24dp"
+                            android:layout_height="24dp"
+                            android:src="@drawable/baseline_info_outline_24"
+                            app:tint="@color/lightVeryGreen" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="8dp"
+                            android:fontFamily="@font/roboto"
+                            android:text="This prescription will be digitally signed and sent to the patient"
+                            android:textColor="@color/lightVeryGreen"
+                            android:textSize="13sp" />
+                    </LinearLayout>
+
+                </androidx.cardview.widget.CardView>
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btnPrescriptionSubmit"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/lightGreen"
+                    android:fontFamily="@font/roboto"
+                    android:text="Submit Prescription"
+                    android:layout_marginTop="18dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/deepGreen"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    app:icon="@drawable/outline_keyboard_double_arrow_right_24"
+                    app:iconTint="@color/black"
+                    app:iconGravity="textEnd"
+                    app:iconSize="25dp"
+                    />
+
+
+            </LinearLayout>
+
+        </androidx.core.widget.NestedScrollView>
+
+    </FrameLayout>
+
+
+
+
+</LinearLayout>

@@ -1,6 +1,8 @@
 package com.mk.medtrust.auth.data.model
 
+import android.os.Parcelable
 import com.mk.medtrust.util.AppointmentStatus
+import kotlinx.parcelize.Parcelize
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.LocalTime
@@ -19,6 +21,7 @@ data class AppUser(
     val specialisation: String="",
 )
 
+@Parcelize
 data class Appointment(
     val appointmentId: String = "",
     val doctorId: String = "",
@@ -29,8 +32,22 @@ data class Appointment(
     val slotId: String = "",
     val slotTime: String = "",
     var status: AppointmentStatus = AppointmentStatus.BOOKED,
-    val createdAt: Long = System.currentTimeMillis()
-)
+    val createdAt: Long = System.currentTimeMillis(),
+    var prescription : Prescription? = null
+): Parcelable
+
+@Parcelize
+data class Prescription(
+    val medicines: List<Medicine> = emptyList(),
+    val notes: String = ""
+) : Parcelable
+
+@Parcelize
+data class Medicine(
+    val name: String = "",
+    val dose: String = "",      // e.g., "500mg"
+    val frequency: String = ""  // e.g., "Twice a day"
+) : Parcelable
 
 
 fun Appointment.toLocalDateTime(): LocalDateTime {

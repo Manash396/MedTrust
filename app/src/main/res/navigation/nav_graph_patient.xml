@@ -19,6 +19,14 @@
             android:id="@+id/homeFragment_to_patientProfile"
             app:destination="@+id/patientProfile"
             />
+        <action
+            android:id="@+id/homeFragment_to_appointmentListPFragment"
+            app:destination="@+id/appointmentListPFragment"
+            />
+        <action
+            android:id="@+id/homeFragment_to_historyListPFragment"
+            app:destination="@+id/historyListPFragment"
+            />
     </fragment>
 
     <fragment
@@ -60,5 +68,40 @@
             app:argType="com.mk.medtrust.doctor.model.Doctor"
             />
     </fragment>
+
+    <fragment
+        android:id="@+id/appointmentListPFragment"
+        android:name="com.mk.medtrust.patient.ui.fragment.AppointmentListPFragment"
+        tools:layout="@layout/fragment_appointment_list_p">
+
+        <action
+            android:id="@+id/appointmentListPFragment_to_appointmentDetailPFragment"
+            app:destination="@+id/appointmentDetailPFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyListPFragment"
+        android:name="com.mk.medtrust.patient.ui.fragment.ApptHistoryPFragment"
+        tools:layout="@layout/fragment_appt_history_p">
+
+        <action
+            android:id="@+id/historyListPFragment_to_appointmentDetailPFragment"
+            app:destination="@+id/appointmentDetailPFragment"
+            />
+    </fragment>
+
+    <fragment
+        android:id="@+id/appointmentDetailPFragment"
+        android:name="com.mk.medtrust.patient.ui.fragment.AppointmentDetailPFragment"
+        tools:layout="@layout/fragment_appointment_detail_p">
+
+        <argument
+            android:name="appointmentId"
+            app:argType="string"
+            />
+    </fragment>
+
+
 
 </navigation>

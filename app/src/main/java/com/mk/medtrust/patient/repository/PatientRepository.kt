@@ -11,6 +11,8 @@ import com.mk.medtrust.auth.data.model.Appointment
 import com.mk.medtrust.doctor.model.Doctor
 import com.mk.medtrust.patient.model.Patient
 import com.mk.medtrust.patient.model.toMap
+import com.mk.medtrust.util.AppConstant
+import com.mk.medtrust.util.AppointmentStatus
 import com.mk.medtrust.util.Result
 import com.yourpackage.app.AppPreferences
 import kotlinx.coroutines.tasks.await
@@ -147,5 +149,87 @@ class PatientRepository @Inject constructor(
         }
     }
 
+    suspend fun getAllAppointments(patientId : String) : Result<List<Appointment>> {
+        return try {
+            val allAppointments  = mutableListOf<Appointment>()
+
+            val appointmentSnapshot = storeDb.collection("patients")
+                .document(patientId)
+                .collection("appointments")
+                .get()
+                .await()
+
+
+            Log.d("Krishna",appointmentSnapshot.toString())
+
+            allAppointments.addAll(appointmentSnapshot.toObjects(Appointment::class.java))
+
+            Result.Success(allAppointments)
+        }catch (e : Exception){
+            Result.Error(e.message ?: "Failed to fetch appointments")
+        }
+    }
+
+
+    suspend fun getAppointmentDetail(apptId : String): Result<Appointment>{
+        return try {
+            val appointmentSnapshot = storeDb.collection("patients")
+                .document(AppPreferences.getString(AppConstant.UID))
+                .collection("appointments")
+                .document(apptId)
+                .get()
+                .await()
+
+            val appointment = appointmentSnapshot.toObject(Appointment::class.java)
+            if (appointment != null) {
+                Result.Success(appointment)
+            } else {
+                Result.Error("Appointment not found")
+            }
+        }catch (e : Exception){
+            Result.Error(e.message ?: "Failed to fetch appointments")
+        }
+    }
+
+    suspend fun getDoctorDetail(doctorId : String): Result<Doctor>{
+        return try {
+            val doctorSnapshot  = storeDb.collection("doctors")
+                .document(doctorId)
+                .get().await()
+
+            val doctor  =  doctorSnapshot.toObject(Doctor::class.java)
+            if (doctor == null) Result.Error("Doctor not found")
+            else Result.Success(doctor)
+        }catch (e: Exception){
+            Result.Error(e.message ?: "Failed to fetch doctor detail")
+        }
+    }
+
+    suspend fun markCompleteAppointment(doctorId: String ,dateId: String , apptId: String): Result<String>{
+        return try {
+            val batch  =  storeDb.batch()
+
+            val patientRef = storeDb.collection("patients")
+                .document(AppPreferences.getString(AppConstant.UID))
+                .collection("appointments")
+                .document(apptId)
+
+            val doctorRef = storeDb.collection("doctors")
+                .document(doctorId)
+                .collection("bookings")
+                .document(dateId)
+                .collection("appointments")
+                .document(apptId)
+
+            batch.update(patientRef, "status", AppointmentStatus.COMPLETED.name)
+            batch.update(doctorRef, "status", AppointmentStatus.COMPLETED.name)
+
+            batch.commit()
+
+            Result.Success("Appointment Completed")
+        }catch (e: Exception){
+            Result.Error(e.message ?: "Failed to fetch doctor detail")
+        }
+    }
 
 }

@@ -68,6 +68,9 @@ dependencies {
     implementation("com.razorpay:checkout:1.6.40")
     implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.7.0")
     implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0")
+    implementation("im.zego:zego_uikit_prebuilt_call_android:+")
+    implementation("com.facebook.shimmer:shimmer:0.5.0")
+
 
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

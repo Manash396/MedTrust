@@ -1,4 +1,4 @@
-package com.mk.medtrust.doctor.ui.viewmodel
+package com.mk.medtrust.patient.ui.viewmodel
 
 import android.util.Log
 import androidx.lifecycle.LiveData
@@ -7,7 +7,7 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.mk.medtrust.auth.data.model.Appointment
 import com.mk.medtrust.auth.data.model.toLocalDateTime
-import com.mk.medtrust.doctor.repository.DoctorRepository
+import com.mk.medtrust.patient.repository.PatientRepository
 import com.mk.medtrust.util.AppointmentStatus
 import com.mk.medtrust.util.Result
 import dagger.hilt.android.lifecycle.HiltViewModel
@@ -16,18 +16,21 @@ import java.time.LocalDateTime
 import javax.inject.Inject
 
 @HiltViewModel
-class DoctorSharedViewModel @Inject constructor(
-    private val repo : DoctorRepository
-): ViewModel(){
+class PatientSharedViewModel @Inject constructor(
+    private val repo :  PatientRepository
+) : ViewModel(){
 
-    private val _appointments = MutableLiveData<Result<List<Appointment>>>()
-    val appointments: LiveData<Result<List<Appointment>>> = _appointments
+
+    private val _appointments = MutableLiveData<com.mk.medtrust.util.Result<List<Appointment>>>()
+    val appointments: LiveData<com.mk.medtrust.util.Result<List<Appointment>>> = _appointments
 
     private var appointmentList = mutableListOf<Appointment>()
 
 
     val ongoingAppointmentList : List<Appointment> get() =  ongoingAppointments(appointmentList)
     val historyAppointmentList : List<Appointment> get() = historyAppointment(appointmentList)
+
+    var currentAppointment : Appointment? = null
 
     private fun ongoingAppointments(list : List<Appointment>) : List<Appointment> {
         val now = LocalDateTime.now() .withSecond(0)
@@ -46,10 +49,10 @@ class DoctorSharedViewModel @Inject constructor(
         }
     }
 
-    fun loadAppointments(doctorId: String) {
+    fun loadAppointments(patientId: String) {
         viewModelScope.launch {
             _appointments.value = Result.Loading
-            _appointments.value = repo.getAllAppointments(doctorId)
+            _appointments.value = repo.getAllAppointments(patientId)
         }
     }
 
@@ -57,4 +60,5 @@ class DoctorSharedViewModel @Inject constructor(
         appointmentList.clear()
         appointmentList.addAll(list)
     }
+
 }

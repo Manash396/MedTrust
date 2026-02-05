@@ -30,6 +30,7 @@
 
     <string name="edit_settings">Profile</string>
     <string name="no_doctors_found">No Doctors Found</string>
+    <string name="doctor_s_notes">DOCTOR\'S NOTES</string>
 
 
 </resources>

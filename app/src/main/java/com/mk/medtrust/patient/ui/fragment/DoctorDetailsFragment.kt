@@ -29,6 +29,7 @@ import com.mk.medtrust.patient.model.DateItem
 import com.mk.medtrust.patient.model.SlotItem
 import com.mk.medtrust.patient.ui.PaymentActivity
 import com.mk.medtrust.patient.ui.adapter.DateAdapter
+import com.mk.medtrust.patient.ui.adapter.DoctorDetailMainAdapter
 import com.mk.medtrust.patient.ui.adapter.SlotAdapter
 import com.mk.medtrust.patient.ui.viewmodel.DoctorDetailsViewModel
 import com.mk.medtrust.util.AppConstant
@@ -37,6 +38,7 @@ import com.mk.medtrust.util.Result
 import com.mk.medtrust.util.UtilObject
 import com.yourpackage.app.AppPreferences
 import dagger.hilt.android.AndroidEntryPoint
+import timber.log.Timber
 import java.time.LocalDate
 import java.time.LocalDateTime
 import java.time.LocalTime
@@ -54,6 +56,7 @@ class DoctorDetailsFragment : Fragment() {
     private val viewModel : DoctorDetailsViewModel by viewModels()
     private lateinit var dateAdapter : DateAdapter
     private lateinit var slotAdapter : SlotAdapter
+    private lateinit var mainAdapter : DoctorDetailMainAdapter
 
     private var appointment : Appointment? =null
     private val appointmentMapByDate : MutableMap<String, MutableList<Appointment>> = mutableMapOf()
@@ -173,8 +176,8 @@ class DoctorDetailsFragment : Fragment() {
             appointment = appmt
             Log.d("Krishna",appointment.toString())
         }
-        binding.slotRecyclerView.layoutManager = GridLayoutManager(requireContext(),3)
-        binding.slotRecyclerView.adapter = slotAdapter
+//        binding.slotRecyclerView.layoutManager = GridLayoutManager(requireContext(),3)
+//        binding.slotRecyclerView.adapter = slotAdapter
 
         // for dates
         val datesAvailable = generateDates(doctor.availability)
@@ -186,16 +189,24 @@ class DoctorDetailsFragment : Fragment() {
             val ap = appointmentMapByDate[dateId]
             val bookedSlots = ap?.map { appointment -> appointment.slotTime } ?: emptyList()
 
-            Log.d("Krishna",bookedSlots.toString())
 
-            val slots = generateSlots(doctor.availability.startTime,doctor.availability.endTime,bookedSlots,dateId)
+            val slots = generateSlots(doctor.availability.startTime,doctor.availability.endTime,bookedSlots,dateItem)
+            Timber.tag("Krishna").d(slots.toString())
 
             slotAdapter.updateNewList(slots)
             appointment = null // resetting for new
+        }.apply {
+            updateNewList(datesAvailable)
         }
-        binding.dateRecyclerView.adapter = dateAdapter.apply {
-            updateNewList(datesAvailable as MutableList<DateItem>)
-        }
+
+//        binding.dateRecyclerView.adapter = dateAdapter.apply {
+//            updateNewList(datesAvailable as MutableList<DateItem>)
+//        }
+
+// nested recycle view
+        mainAdapter = DoctorDetailMainAdapter(slotAdapter,dateAdapter)
+        binding.mainRecyclerView.layoutManager = LinearLayoutManager(requireContext())
+        binding.mainRecyclerView.adapter = mainAdapter
 
         // availability shown here
         showAvailabilityDays(binding.availabilityContainer ,  doctor.availability.days)
@@ -243,15 +254,17 @@ class DoctorDetailsFragment : Fragment() {
         }
     }
 
-    private fun generateSlots(startTime: String, endTime: String , bookedSlots: List<String>, dateId : String): List<SlotItem> {
+    private fun generateSlots(startTime: String, endTime: String , bookedSlots: List<String>, dateItem  : DateItem): List<SlotItem> {
         val slotDuration  = 30
         val timeFormatter24 = DateTimeFormatter.ofPattern("HH:mm")
         val timeFormatter12 = DateTimeFormatter.ofPattern("hh:mm a", Locale.ENGLISH)
 
+        val dateId  = "${dateItem.dayOfMonth}_${dateItem.monthOfYear}_${dateItem.year}"
+
         val start = LocalTime.parse(startTime, timeFormatter12)
         val end = LocalTime.parse(endTime, timeFormatter12)
 
-        val today  = LocalDate.now()
+        val slotDate  = LocalDate.of(dateItem.year,dateItem.monthOfYear,dateItem.dayOfMonth)
         val now  = LocalDateTime.now()
 
         var current = start
@@ -261,10 +274,10 @@ class DoctorDetailsFragment : Fragment() {
             val displayTime = current.format(timeFormatter12)
 
             val slotDateTime  = LocalDateTime.of(
-                today,
+                slotDate,
                 current
             )
-
+            Timber.tag("Krishna").d(slotDateTime.toString())
             val isAvailable = !bookedSlots.contains(displayTime) && slotDateTime.isAfter(now)
 
             slots.add(

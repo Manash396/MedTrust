@@ -20,4 +20,6 @@ class DoctorActivity : AppCompatActivity() {
         WindowInsetsControllerCompat(window,window.decorView).isAppearanceLightNavigationBars = false
         WindowInsetsControllerCompat(window,window.decorView).isAppearanceLightStatusBars = false
     }
+
+
 }

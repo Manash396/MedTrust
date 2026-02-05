@@ -194,6 +194,7 @@
         app:layout_constraintEnd_toStartOf="@id/cardDoctors">
 
         <LinearLayout
+            android:id="@+id/historyApptBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -231,6 +232,7 @@
         app:layout_constraintTop_toBottomOf="@id/bookConsultation">
 
         <LinearLayout
+            android:id="@+id/ongoingAppointmentBtn"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
@@ -238,10 +240,29 @@
             android:gravity="center"
             android:padding="16dp">
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/baseline_supervisor_account_24"/>
+            <FrameLayout
+                android:layout_width="48dp"
+                android:layout_height="40dp">
+
+                <!-- Main Icon -->
+                <ImageView
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:src="@drawable/baseline_supervisor_account_24"
+                   />
+
+                <!-- Green status dot -->
+                <View
+                    android:id="@+id/greenDotOngoingApmt"
+                    android:layout_width="10dp"
+                    android:layout_height="10dp"
+                    android:layout_gravity="top|end"
+                    android:background="@drawable/bg_green_dot"
+                    android:visibility="invisible"
+                    android:layout_margin="2dp" />
+
+            </FrameLayout>
+
 
             <TextView
                 android:layout_width="wrap_content"

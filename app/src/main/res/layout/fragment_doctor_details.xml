@@ -65,6 +65,7 @@
                         android:layout_weight="1"
                         android:orientation="vertical">
 
+
                         <TextView
                             android:id="@+id/name"
                             android:layout_width="wrap_content"
@@ -72,7 +73,10 @@
                             android:text="Dr. Sarah Wilson"
                             android:textColor="@color/white"
                             android:textStyle="bold"
-                            android:textSize="16sp"/>
+                            android:textSize="16sp"
+                            app:drawableEndCompat="@drawable/baseline_verified_24"
+                            android:drawablePadding="3dp"
+                            app:drawableTint="@color/lightGreen" />
 
                         <TextView
                             android:id="@+id/specialist"
@@ -167,36 +171,46 @@
                 />
 
             <!-- Select Date -->
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:layout_marginTop="16dp"
-                android:text="Select Date"
-                android:textColor="@color/lightGreen"
-                android:textStyle="bold"/>
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_marginTop="16dp"-->
+<!--                android:text="Select Date"-->
+<!--                android:textColor="@color/lightGreen"-->
+<!--                android:textStyle="bold"/>-->
 
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/dateRecyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="100dp"
-                android:orientation="horizontal"
-                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
-                android:paddingTop="8dp"/>
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/dateRecyclerView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="100dp"-->
+<!--                android:orientation="horizontal"-->
+<!--                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"-->
+<!--                android:paddingTop="8dp"/>-->
 
             <!-- Select slot -->
-            <TextView
-                android:layout_height="wrap_content"
-                android:layout_width="wrap_content"
-                android:text="Select Slot"
-                android:textColor="@color/lightGreen"
-                android:textStyle="bold"/>
+<!--            <TextView-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:text="Select Slot"-->
+<!--                android:textColor="@color/lightGreen"-->
+<!--                android:textStyle="bold"/>-->
+
+<!--             only one parent recyclerView -->
+
+<!--            <androidx.recyclerview.widget.RecyclerView-->
+<!--                android:id="@+id/slotRecyclerView"-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:nestedScrollingEnabled="false"-->
+<!--                android:paddingTop="8dp"-->
+<!--                tools:listitem="@layout/item_slot"/>-->
 
             <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/slotRecyclerView"
+                android:id="@+id/mainRecyclerView"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:paddingTop="8dp"
-                tools:listitem="@layout/item_slot"/>
+                />
 
 
         </LinearLayout>

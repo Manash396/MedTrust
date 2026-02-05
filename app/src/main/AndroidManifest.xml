@@ -13,6 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.MedTrust">
         <activity
+            android:name=".patient.ui.PatientCallActivity"
+            android:exported="false" />
+        <activity
             android:name=".patient.ui.PaymentActivity"
             android:exported="false" />
         <activity
@@ -36,8 +39,7 @@
 
         <meta-data
             android:name="com.razorpay.ApiKey"
-            android:value="rzp_test_S5fQL2UvsSwF0N"
-            />
+            android:value="rzp_test_S5fQL2UvsSwF0N" />
     </application>
 
 </manifest>

@@ -10,6 +10,7 @@ import androidx.fragment.app.activityViewModels
 import androidx.navigation.fragment.findNavController
 import com.mk.medtrust.R
 import com.mk.medtrust.auth.data.model.Appointment
+import com.mk.medtrust.auth.data.model.toLocalDateTime
 import com.mk.medtrust.databinding.FragmentAppointmentListCurBinding
 import com.mk.medtrust.doctor.model.Doctor
 import com.mk.medtrust.doctor.ui.adapter.AppointmentAdapter
@@ -18,9 +19,11 @@ import com.mk.medtrust.patient.model.DateItem
 import com.mk.medtrust.patient.ui.adapter.DateAdapter
 import com.mk.medtrust.util.AppConstant
 import com.mk.medtrust.util.AvailabilityPrefs
+import com.mk.medtrust.util.Result
 import com.yourpackage.app.AppPreferences
 import dagger.hilt.android.AndroidEntryPoint
 import java.time.LocalDate
+import java.time.LocalDateTime
 import java.time.LocalTime
 import java.time.format.DateTimeFormatter
 import java.util.Locale
@@ -48,8 +51,9 @@ class AppointmentListCurFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        bindData()
         setUpOnclick()
+        observeResponse()
+        sharedViewModel.loadAppointments(AppPreferences.getString(AppConstant.UID))
     }
 
     private fun setUpOnclick() {
@@ -60,6 +64,25 @@ class AppointmentListCurFragment : Fragment() {
         }
 
 
+    }
+    private fun observeResponse() {
+        sharedViewModel.appointments.observe(viewLifecycleOwner) { result ->
+            when (result) {
+                is com.mk.medtrust.util.Result.Error<*> -> {
+
+                }
+
+                com.mk.medtrust.util.Result.Loading -> {
+
+                }
+
+                is Result.Success -> {
+                    Log.d("KrishnaMK",result.data.toString())
+                    sharedViewModel.updateList(result.data)
+                    bindData()
+                }
+            }
+        }
     }
 
     private fun bindData() {
@@ -77,14 +100,33 @@ class AppointmentListCurFragment : Fragment() {
 
                 val dateId = "${dateItem.dayOfMonth}_${dateItem.monthOfYear}_${dateItem.year}"
                 val newList = appointmentMapByDate[dateId] ?: emptyList()
-                noAppointmentFound.visibility = if(newList.isEmpty()) View.VISIBLE else View.GONE
+                noAppointmentFound.visibility = if (newList.isEmpty()) View.VISIBLE else View.GONE
                 appointmentAdapter.updateNewList(newList)
+//                findNavController().navigate(R.id.appointmentListCurFragment_to_appointmentDetailOnFragment)
             }
             dateRecyclerView.adapter = dateAdapter.apply {
                 updateNewList(datesAvailable as MutableList<DateItem>)
             }
 
-            appointmentAdapter = AppointmentAdapter() {}
+            appointmentAdapter = AppointmentAdapter() { appointment ->
+                val now = LocalDateTime.now()
+                val apptDate = appointment.toLocalDateTime()
+                val isWithin26min =
+                    now.isAfter(apptDate.minusMinutes(1)) && now.isBefore(apptDate.plusMinutes(25))
+                if (!isWithin26min) {
+                    appointmentMapByDate.clear()
+                    appointmentMapByDate.putAll(appointmentMapFunction(sharedViewModel.ongoingAppointmentList))
+                    val newList  = appointmentMapByDate[appointment.dateId] ?: emptyList()
+                    appointmentAdapter.updateNewList(newList)
+
+                    return@AppointmentAdapter
+                }
+                val action =
+                    AppointmentListCurFragmentDirections.appointmentListCurFragmentToAppointmentDetailOnFragment(
+                        appointment
+                    )
+                findNavController().navigate(action)
+            }
             appointmentRecyclerView.adapter = appointmentAdapter
 
         }

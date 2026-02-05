@@ -6,6 +6,7 @@ import com.google.firebase.firestore.FirebaseFirestore
 import com.mk.medtrust.auth.data.model.Appointment
 import com.mk.medtrust.doctor.model.Doctor
 import com.mk.medtrust.doctor.model.toMap
+import com.mk.medtrust.patient.model.Patient
 import com.mk.medtrust.util.Result
 import com.yourpackage.app.AppPreferences
 import kotlinx.coroutines.tasks.await
@@ -96,6 +97,49 @@ class DoctorRepository @Inject constructor(
             Result.Success(allAppointments)
         }catch (e : Exception){
             Result.Error(e.message ?: "Failed to fetch bookings")
+        }
+    }
+
+    suspend fun getAppointmentDetail(appt : Appointment) : Result<Appointment>{
+        return try {
+            val apptSnapshot  = storeDB.collection("doctors")
+                .document(appt.doctorId)
+                .collection("bookings")
+                .document(appt.dateId)
+                .collection("appointments")
+                .document(appt.appointmentId)
+                .get()
+                .await()
+            val appointment = apptSnapshot.toObject(Appointment::class.java)
+            if (appointment != null) {
+                Result.Success(appointment)
+            }else{
+                Result.Error("No data found")
+            }
+
+        }catch (e: Exception){
+            Result.Error(e.message ?: "Failed to fetch Appointment Detail")
+        }
+    }
+
+
+    suspend fun getPatientDetail(patientId: String) : Result<Patient>{
+        return try {
+            val apptSnapshot  = storeDB.collection("patients")
+                .document(patientId)
+                .get()
+                .await()
+
+            val patient = apptSnapshot.toObject(Patient::class.java)
+
+            if (patient != null) {
+                Result.Success(patient)
+            }else{
+                Result.Error("No data found")
+            }
+
+        }catch (e: Exception){
+            Result.Error(e.message ?: "Failed to fetch Patient Detail")
         }
     }
 

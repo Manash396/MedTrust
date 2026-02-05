@@ -26,12 +26,34 @@
         android:id="@+id/appointmentListCurFragment"
         android:name="com.mk.medtrust.doctor.ui.fragment.AppointmentListCurFragment"
         tools:layout="@layout/fragment_appointment_list_cur"
-        />
+        >
+
+        <action
+            android:id="@+id/appointmentListCurFragment_to_appointmentDetailOnFragment"
+            app:destination="@+id/appointmentDetailOnFragment"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/appointmentDetailOnFragment"
+        android:name="com.mk.medtrust.doctor.ui.fragment.AppointmentDetailOnFragment"
+        tools:layout="@layout/fragment_appointment_detail_on"
+        >
+
+        <argument
+            android:name="appointment"
+            app:argType="com.mk.medtrust.auth.data.model.Appointment"
+            />
+
+    </fragment>
 
     <fragment
         android:id="@+id/doctorProfileFragment"
         android:name="com.mk.medtrust.doctor.ui.fragment.ProfileDoctorFragment"
         tools:layout="@layout/fragment_profile_doctor"
         />
+
+
 
 </navigation>
