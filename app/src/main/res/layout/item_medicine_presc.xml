@@ -1,0 +1,28 @@
+<LinearLayout
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="8dp"
+    android:background="#12262D"
+    android:paddingVertical="4dp"
+    android:weightSum="2"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <TextView
+        android:id="@+id/medinceADose"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Medicine"
+        android:textColor="#FFFFFF"
+        android:layout_weight="1"
+        android:textSize="14sp"/>
+
+    <TextView
+        android:id="@+id/instructionFreq"
+        android:layout_weight="1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Instruction"
+        android:textColor="#FFFFFF"
+        android:textSize="14sp"/>
+</LinearLayout>

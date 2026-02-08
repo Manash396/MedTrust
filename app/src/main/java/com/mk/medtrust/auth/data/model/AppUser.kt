@@ -39,6 +39,10 @@ data class Appointment(
 @Parcelize
 data class Prescription(
     val medicines: List<Medicine> = emptyList(),
+    val patientDob : String = "",
+    val patientGender : String = "",
+    val doctorLisc : String = "",
+    val hospitalName : String = "",
     val notes: String = ""
 ) : Parcelable
 

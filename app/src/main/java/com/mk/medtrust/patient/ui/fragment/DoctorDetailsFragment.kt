@@ -183,7 +183,7 @@ class DoctorDetailsFragment : Fragment() {
         val datesAvailable = generateDates(doctor.availability)
         dateAdapter = DateAdapter(){ dateItem ->
             // to access on going appointments on that day from firestore
-            val dateId  = "${dateItem.dayOfMonth}_${dateItem.monthOfYear}_${dateItem.year}"
+            val dateId = String.format(Locale.ENGLISH,"%02d_%02d_%04d", dateItem.dayOfMonth, dateItem.monthOfYear, dateItem.year)
 
             Log.d("Krishna",dateId)
             val ap = appointmentMapByDate[dateId]
@@ -259,7 +259,7 @@ class DoctorDetailsFragment : Fragment() {
         val timeFormatter24 = DateTimeFormatter.ofPattern("HH:mm")
         val timeFormatter12 = DateTimeFormatter.ofPattern("hh:mm a", Locale.ENGLISH)
 
-        val dateId  = "${dateItem.dayOfMonth}_${dateItem.monthOfYear}_${dateItem.year}"
+        val dateId = String.format(Locale.ENGLISH,"%02d_%02d_%04d", dateItem.dayOfMonth, dateItem.monthOfYear, dateItem.year)
 
         val start = LocalTime.parse(startTime, timeFormatter12)
         val end = LocalTime.parse(endTime, timeFormatter12)

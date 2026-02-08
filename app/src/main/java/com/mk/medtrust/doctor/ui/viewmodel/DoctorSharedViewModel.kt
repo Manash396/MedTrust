@@ -25,7 +25,6 @@ class DoctorSharedViewModel @Inject constructor(
 
     private var appointmentList = mutableListOf<Appointment>()
 
-
     val ongoingAppointmentList : List<Appointment> get() =  ongoingAppointments(appointmentList)
     val historyAppointmentList : List<Appointment> get() = historyAppointment(appointmentList)
 
@@ -40,7 +39,7 @@ class DoctorSharedViewModel @Inject constructor(
     }
 
     private fun historyAppointment(list: List<Appointment>): List<Appointment>{
-        val now = LocalDateTime.now()
+//        Log.d("KrishnaMK",list.toString())
         return list.filter {
             AppointmentStatus.COMPLETED == it.status
         }

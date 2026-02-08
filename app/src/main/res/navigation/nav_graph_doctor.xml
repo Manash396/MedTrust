@@ -19,8 +19,13 @@
             android:id="@+id/homeFragment_to_appointmentListCurFragment"
             app:destination="@+id/appointmentListCurFragment"
             />
-
+        <action
+            android:id="@+id/homeFragment_to_historyDFragment"
+            app:destination="@+id/historyDFragment"
+            />
     </fragment>
+
+
 
     <fragment
         android:id="@+id/appointmentListCurFragment"
@@ -30,6 +35,19 @@
 
         <action
             android:id="@+id/appointmentListCurFragment_to_appointmentDetailOnFragment"
+            app:destination="@+id/appointmentDetailOnFragment"
+            />
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/historyDFragment"
+        android:name="com.mk.medtrust.doctor.ui.fragment.HistoryDFragment"
+        tools:layout="@layout/fragment_history_d"
+        >
+
+        <action
+            android:id="@+id/historyDFragment_to_appointmentDetailOnFragment"
             app:destination="@+id/appointmentDetailOnFragment"
             />
 

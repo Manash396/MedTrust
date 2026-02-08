@@ -62,8 +62,6 @@ class AppointmentListCurFragment : Fragment() {
                 findNavController().popBackStack()
             }
         }
-
-
     }
     private fun observeResponse() {
         sharedViewModel.appointments.observe(viewLifecycleOwner) { result ->

@@ -66,6 +66,10 @@ class ApptHistoryPFragment : Fragment() {
             LocalDateTime.of(date, time)
         }.reversed()
 
+        if (list.isEmpty()) {
+            binding.noHistory.visibility = View.VISIBLE
+            return
+        }
         historyListSorted = list as MutableList<Appointment>
         bindData()
     }

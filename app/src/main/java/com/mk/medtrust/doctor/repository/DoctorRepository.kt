@@ -4,6 +4,7 @@ import android.util.Log
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.firestore.FirebaseFirestore
 import com.mk.medtrust.auth.data.model.Appointment
+import com.mk.medtrust.auth.data.model.Prescription
 import com.mk.medtrust.doctor.model.Doctor
 import com.mk.medtrust.doctor.model.toMap
 import com.mk.medtrust.patient.model.Patient
@@ -143,6 +144,35 @@ class DoctorRepository @Inject constructor(
         }
     }
 
+    suspend fun updatePrescription(prescription: Prescription, appointment: Appointment) : Result<String>{
+        return try {
+            val batch  = storeDB.batch()
+
+            val doctorRef = storeDB.collection("doctors")
+                .document(appointment.doctorId)
+                .collection("bookings")
+                .document(appointment.dateId)
+                .collection("appointments")
+                .document(appointment.appointmentId)
+
+            val patientRef = storeDB.collection("patients")
+                .document(appointment.patientId)
+                .collection("appointments")
+                .document(appointment.appointmentId)
+
+            batch.update(doctorRef,
+                mapOf("prescription" to prescription)
+                )
+            batch.update(patientRef, mapOf("prescription" to prescription) )
+
+            batch.commit().await()
+
+            Result.Success("Prescription updated successfully")
+
+        }catch (e : Exception){
+            Result.Error(e.message ?: "Failed to Update Prescription")
+        }
+    }
 
     suspend fun logout() : Result<String>{
         return try {

@@ -110,6 +110,7 @@ class HomeFragmentD : Fragment() {
             when (result) {
                 is Result.Error<*> -> {
                     showOkDialog(result.message)
+                    Log.d("KrishnaMk",result.message)
                 }
 
                 Result.Loading -> {
@@ -117,7 +118,7 @@ class HomeFragmentD : Fragment() {
                 }
 
                 is Result.Success -> {
-                    Log.d("KrishnaMK",result.data.toString())
+//                    Log.d("KrishnaMK",result.data.toString())
                     sharedViewModel.updateList(result.data)
                     binding.appointmentListCurBtn.isEnabled =  true
                     bindData()
@@ -138,6 +139,9 @@ class HomeFragmentD : Fragment() {
         binding.appointmentListCurBtn.setOnClickListener {
             if (!binding.appointmentListCurBtn.isEnabled) return@setOnClickListener
             findNavController().navigate(R.id.homeFragment_to_appointmentListCurFragment)
+        }
+        binding.historyApptBtnDoctor.setOnClickListener {
+            findNavController().navigate(R.id.homeFragment_to_historyDFragment)
         }
 
         binding.appointmentListCurBtn.isEnabled = false

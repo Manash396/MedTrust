@@ -27,7 +27,7 @@
             android:layout_weight="1"
             android:fontFamily="@font/roboto"
             android:gravity="center"
-            android:text="Appointment History"
+            android:text="History"
             android:textColor="@color/lightGreen"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -38,23 +38,52 @@
 
     </LinearLayout>
 
-    <TextView
-        android:id="@+id/noHistory"
+
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:gravity="center"
-        android:text="No History"
-        android:textSize="14sp"
-        android:visibility="gone"
-        android:textColor="@color/lightGreen"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/roboto"
+                android:gravity="center"
+                android:text="Appointments History"
+                android:textColor="@color/white"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/dateRecyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/noAppointmentFound"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
         android:fontFamily="@font/roboto"
-        />
+        android:gravity="center"
+        android:visibility="gone"
+        android:text="No Appointments"
+        android:textColor="@color/lightGreen"
+        android:textSize="15sp"
+        android:textStyle="bold" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/appointmentRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="6dp"
         android:padding="10dp"
         app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
 
