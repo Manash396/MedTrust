@@ -1,7 +1,11 @@
 package com.mk.medtrust.doctor.ui.fragment
 
+import android.Manifest
 import android.app.AlertDialog
+import android.content.ActivityNotFoundException
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.os.Build
 import android.os.Bundle
 import android.util.Log
 import android.view.Gravity
@@ -11,6 +15,8 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.Toast
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.viewModels
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
@@ -37,6 +43,8 @@ import java.time.Period
 import java.time.format.DateTimeFormatter
 import java.util.Locale
 import androidx.core.view.isEmpty
+import com.mk.medtrust.databinding.PrescriptionViewBinding
+import com.mk.medtrust.util.UtilObject.saveViewAsPdf
 
 @AndroidEntryPoint
 class AppointmentDetailOnFragment : Fragment() {
@@ -288,6 +296,9 @@ class AppointmentDetailOnFragment : Fragment() {
             binding.btnPrescriptionSubmit.setOnClickListener {
                 updateAndSubmitPrescription()
             }
+            binding.downloadPrescBtn.setOnClickListener {
+                savePdf()
+            }
         }
     }
 
@@ -343,6 +354,85 @@ class AppointmentDetailOnFragment : Fragment() {
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
+    }
+
+    private val storagePermissionLauncher =
+        registerForActivityResult(
+            ActivityResultContracts.RequestPermission()
+        ) { granted ->
+            if (granted) {
+                savePdf()
+            } else {
+                Toast.makeText(requireContext(), "Storage permission denied", Toast.LENGTH_SHORT).show()
+            }
+        }
+
+
+
+    fun savePdf() {
+        if (Build.VERSION.SDK_INT <= Build.VERSION_CODES.P) {
+            if (ContextCompat.checkSelfPermission(
+                    requireContext(),
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE
+                ) != PackageManager.PERMISSION_GRANTED
+            ) {
+                storagePermissionLauncher.launch(
+                    Manifest.permission.WRITE_EXTERNAL_STORAGE
+                )
+                return
+            }
+        }
+
+        val copiedPrescriptionPDF = copyPrescriptionPdf() ?: return
+
+        val uri  = saveViewAsPdf(requireContext().applicationContext, copiedPrescriptionPDF, "prescription${patientCurrent.mobile}")
+
+        val openIntent = Intent(Intent.ACTION_VIEW).apply {
+            setDataAndType(uri, "application/pdf")
+            addFlags(Intent.FLAG_GRANT_READ_URI_PERMISSION)
+        }
+
+        try {
+            startActivity(openIntent)
+        } catch (e: ActivityNotFoundException) {
+            Toast.makeText(requireContext(), "No PDF viewer installed", Toast.LENGTH_SHORT).show()
+        }
+    }
+
+    // this will not viewed anywhere just to create pdf untouch the actual ui
+    private fun copyPrescriptionPdf() : View? {
+        val pdfBinding = PrescriptionViewBinding.inflate(LayoutInflater.from(requireContext()) ,null , false)
+
+        val pres = appointmentCurrent.prescription ?: return null
+
+        pdfBinding.apply {
+            hospitalName.text = pres.hospitalName
+            patientName.text = appointmentCurrent.patientName
+            dobAndGender.text = "${pres.patientGender} , ${pres.patientDob}"
+            doctorLisc.text = pres.doctorLisc
+            doctorName.text = "Dr ${appointmentCurrent.doctorName}"
+            doctorNotesPresc.text = pres.notes
+            medicineContainerPresc.removeAllViews()
+        }
+
+
+        val medicines = pres.medicines
+        Log.d("KrishnaMk",medicines.toString())
+        val containerMed = pdfBinding.medicineContainerPresc
+
+        medicines.forEach { medicine ->
+            val itemMedicinePrescBinding =
+                ItemMedicinePrescBinding.inflate(
+                    LayoutInflater.from(containerMed.context), containerMed, false
+                )
+            itemMedicinePrescBinding.medinceADose.text = "${medicine.name}, ${medicine.dose}"
+            itemMedicinePrescBinding.instructionFreq.text = medicine.name
+
+            containerMed.addView(itemMedicinePrescBinding.root)
+        }
+
+        return pdfBinding.root
+
     }
 
 }

@@ -5,6 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical"
     android:background="#12262D"
+    android:id="@+id/downloadPdf"
     android:padding="16dp">
 
     <!-- Header -->
