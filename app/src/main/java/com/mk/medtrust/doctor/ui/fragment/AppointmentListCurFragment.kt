@@ -88,7 +88,7 @@ class AppointmentListCurFragment : Fragment() {
         appointmentMapByDate.putAll(appointmentMapFunction(sharedViewModel.ongoingAppointmentList))
         binding.apply {
             val todayDateId = with(LocalDate.now()) {
-                "${dayOfMonth}_${monthValue}_${year}"
+                String.format(Locale.ENGLISH,"%02d_%02d_%04d", dayOfMonth, monthValue, year)
             }
 
             todaysApp.text = appointmentMapByDate[todayDateId]?.size?.toString() ?: "0"
@@ -96,7 +96,7 @@ class AppointmentListCurFragment : Fragment() {
             val datesAvailable = generateDates(AvailabilityPrefs.getDoctorAvailability())
             dateAdapter = DateAdapter() { dateItem ->
 
-                val dateId = "${dateItem.dayOfMonth}_${dateItem.monthOfYear}_${dateItem.year}"
+                val dateId = String.format(Locale.ENGLISH,"%02d_%02d_%04d", dateItem.dayOfMonth, dateItem.monthOfYear, dateItem.year)
                 val newList = appointmentMapByDate[dateId] ?: emptyList()
                 noAppointmentFound.visibility = if (newList.isEmpty()) View.VISIBLE else View.GONE
                 appointmentAdapter.updateNewList(newList)

@@ -68,7 +68,7 @@ class HomeFragmentD : Fragment() {
         appointmentMapByDate.putAll(appointmentMapFunction(sharedViewModel.ongoingAppointmentList))
         binding.apply {
             val todayDateId = with(LocalDate.now()) {
-                "${dayOfMonth}_${monthValue}_${year}"
+                 String.format(Locale.ENGLISH,"%02d_%02d_%04d", dayOfMonth, monthValue, year)
             }
             val list = appointmentMapByDate[todayDateId] ?: emptyList()
             pendingApp.text = "${list.size} pending"
@@ -79,6 +79,7 @@ class HomeFragmentD : Fragment() {
     private fun appointmentMapFunction(list: List<Appointment>): MutableMap<String, MutableList<Appointment>> {
         val map = mutableMapOf<String, MutableList<Appointment>>()
         val formatter = DateTimeFormatter.ofPattern("hh:mm a", Locale.US)
+
 
         list
             .sortedBy {
