@@ -252,7 +252,6 @@
                         android:layout_height="wrap_content"
                         android:layout_marginTop="18dp"
                         android:backgroundTint="@color/lightGreen"
-                        android:clickable="false"
                         android:enabled="true"
                         android:focusable="false"
                         android:fontFamily="@font/roboto"
