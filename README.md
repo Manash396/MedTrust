@@ -58,15 +58,15 @@ The app is built with scalability and maintainability in mind, following modern 
 ## 🔐 Authentication Screens
 
 | Login | Register |
-|-------|---------------|----------|
+|-------|---------------|
 | ![Login](screenshots/login.png) | ![Register](screenshots/register.png) |
 
 
 ## 👨‍⚕️ Doctor Screenshots
 
-| Home | Appointments | History | Prescription |
+| Home | Appointments | AppointmentDetail | History | Prescription |
 |------|--------------|---------|---------|
-| ![Doctor Home](screenshots/doctor_home.png) | ![Doctor Appointments](screenshots/doctor_appointments.png) | ![Doctor History](screenshots/doctor_history.png) | ![Prescription](screenshots/doctor_profile.png) |
+| ![Doctor Home](screenshots/doctor_home.png) | ![Doctor Appointments](screenshots/doctor_appointments.png) | ![AppointmentDetail](screenshots/doctor_appointmentdetails.png) | ![Doctor History](screenshots/doctor_history.png) | ![Prescription](screenshots/doctor_prescription.png) |
 
 
 ---
