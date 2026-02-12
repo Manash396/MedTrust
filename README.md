@@ -17,6 +17,9 @@ MedTrust aims to simplify healthcare management by providing:
 
 The app is built with scalability and maintainability in mind, following modern Android development best practices.
 
+### Future Implementation
+- AI-Assisted X-rays analysis module to provide preliminary diagnostic insights for doctors.
+- And blockchain based appointment data integrity verification using cryptographic hash validation and tamper-detection mechanism that triggers real time warnings if appointment data is modified preventing any illegal data change.(Not allowed even by admin and doctor).
 ---
 
 ## 🛠 Tech Stack
@@ -49,6 +52,9 @@ The app is built with scalability and maintainability in mind, following modern 
 
 ### Video Calling
 - Zego SDK (Doctor–Patient video consultation)
+
+### Authentication & Storage
+- Firebase Auth & FireStore SDK
 
 ### Other
 - Android Jetpack Libraries
