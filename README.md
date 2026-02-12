@@ -90,7 +90,7 @@ The app is built with scalability and maintainability in mind, following modern 
 ## 🎥 Video Demo
 
 👉 **Watch here:**  
-https://your-video-link-here  
+https://www.linkedin.com/posts/manash-khatowal-130bb4249_finalyearproject-androiddevelopment-kotlin-activity-7427676180310441984-a4T9?utm_source=share&utm_medium=member_desktop&rcm=ACoAAD2UarQBD2l7XKILTuFmo2kChxJ-oANXLtM 
 
 ---
 
