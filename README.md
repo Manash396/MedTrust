@@ -13,6 +13,7 @@ MedTrust aims to simplify healthcare management by providing:
 - Patient consultation and video-call handling
 - Online payment integration using **Razorpay**
 - **Real-time doctor–patient video consultation using Zego SDK**
+- Prescription can be updated and downloaded as pdf.
 - Smooth and modern UI built with Material Design
 
 The app is built with scalability and maintainability in mind, following modern Android development best practices.
