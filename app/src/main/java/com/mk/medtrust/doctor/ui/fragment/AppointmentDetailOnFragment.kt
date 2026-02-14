@@ -235,7 +235,7 @@ class AppointmentDetailOnFragment : Fragment() {
                         LayoutInflater.from(containerMed.context), containerMed, false
                     )
                 itemMedicinePrescBinding.medinceADose.text = "${medicine.name}, ${medicine.dose}"
-                itemMedicinePrescBinding.instructionFreq.text = medicine.name
+                itemMedicinePrescBinding.instructionFreq.text = medicine.frequency
 
                 containerMed.addView(itemMedicinePrescBinding.root)
             }
@@ -426,7 +426,7 @@ class AppointmentDetailOnFragment : Fragment() {
                     LayoutInflater.from(containerMed.context), containerMed, false
                 )
             itemMedicinePrescBinding.medinceADose.text = "${medicine.name}, ${medicine.dose}"
-            itemMedicinePrescBinding.instructionFreq.text = medicine.name
+            itemMedicinePrescBinding.instructionFreq.text = medicine.frequency
 
             containerMed.addView(itemMedicinePrescBinding.root)
         }
