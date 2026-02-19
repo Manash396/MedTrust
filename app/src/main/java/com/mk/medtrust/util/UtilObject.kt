@@ -15,6 +15,7 @@ import android.os.Environment
 import android.provider.MediaStore
 import android.text.Editable
 import android.text.TextWatcher
+import android.util.Log
 import android.view.View
 import android.view.animation.AccelerateDecelerateInterpolator
 import androidx.core.content.FileProvider
@@ -61,11 +62,16 @@ object UtilObject {
     }
 
     fun timeToMinutes(time1: String): Int {
-        val sdf = SimpleDateFormat("hh:mm a", Locale.getDefault())
-        val date = sdf.parse(time1) ?: return 0
+       return try{
+            val sdf = SimpleDateFormat("hh:mm a", Locale.getDefault())
+            sdf.isLenient = false
+            val date = sdf.parse(time1) ?: return 0
 
-        val cal = Calendar.getInstance().apply { time = date }
-        return cal.get(Calendar.HOUR_OF_DAY) * 60 + cal.get(Calendar.MINUTE)
+            val cal = Calendar.getInstance().apply { time = date }
+            return cal.get(Calendar.HOUR_OF_DAY) * 60 + cal.get(Calendar.MINUTE)
+        }catch (e : Exception){
+            0
+        }
     }
 
 
@@ -126,6 +132,7 @@ object UtilObject {
             savePdfViaFileSystem(context, pdf, fileName)
         }
 
+        Log.d("KrishnaMk",uri.toString())
         pdf.close() // what ever buffer is used will be released eg. Bitmap , painter etc
         return uri
     }
