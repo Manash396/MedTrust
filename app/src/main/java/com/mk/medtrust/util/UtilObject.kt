@@ -78,6 +78,11 @@ object UtilObject {
     fun saveViewAsPdf(context : Context , view: View , fileName: String) : Uri {
         // measure & layout view
         // since i am using the inflated view not rendered one
+
+        if (view.width <=0 || view.height <=0){
+            return Uri.EMPTY
+        }
+
         val widthSpec = View.MeasureSpec.makeMeasureSpec(
             Resources.getSystem().displayMetrics.widthPixels,
             View.MeasureSpec.EXACTLY
