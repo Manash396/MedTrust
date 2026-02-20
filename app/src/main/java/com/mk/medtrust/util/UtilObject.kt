@@ -74,7 +74,7 @@ object UtilObject {
         }
     }
 
-
+/// Junit not possible required the android - runtime (called Integration testing )
     fun saveViewAsPdf(context : Context , view: View , fileName: String) : Uri {
         // measure & layout view
         // since i am using the inflated view not rendered one
