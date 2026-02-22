@@ -191,7 +191,8 @@ class DoctorDetailsFragment : Fragment() {
 
 
             val slots = generateSlots(doctor.availability.startTime,doctor.availability.endTime,bookedSlots,dateItem)
-            Timber.tag("Krishna").d(slots.toString())
+            Timber.tag("Krishna").d("Slots: %s", slots)
+
 
             slotAdapter.updateNewList(slots)
             appointment = null // resetting for new
@@ -277,7 +278,7 @@ class DoctorDetailsFragment : Fragment() {
                 slotDate,
                 current
             )
-            Timber.tag("Krishna").d(slotDateTime.toString())
+//            Timber.tag("Krishna").d(slotDateTime.toString())
             val isAvailable = !bookedSlots.contains(displayTime) && slotDateTime.isAfter(now)
 
             slots.add(
