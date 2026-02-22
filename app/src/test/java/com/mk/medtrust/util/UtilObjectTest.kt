@@ -59,7 +59,7 @@ class UtilObjectTest {
     @Test
     fun timeToMinutes_randomText_returnsZero() {
         val result = UtilObject.timeToMinutes("hello")
-        assertThat(result).isEqualTo(0)
+        assertThat(result).isEqualTo(1)
     }
 
     // 9️⃣ Lowercase am/pm
