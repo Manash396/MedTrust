@@ -25,7 +25,7 @@ jobs:
 
       - name: Decode into app/google-services.json
         run: |
-          printf '%s' '${{ secrets.GOOGLE_SERVICES_JSON }}' > app/google-services.json
+          printf '%s' '${{ secrets.GOOGLE_SERVICES_API_KEY }}' > app/google-services.json
 
       - name: Check created file
         run: |
