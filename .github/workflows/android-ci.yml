@@ -30,7 +30,10 @@ jobs:
       - name: Check created file
         run: |
             cat app/google-services.json
-    
+
+      - name: create a secrets xml file
+        run: |
+          printf '%s' '${{ secrets.RAZORPAY_TEST_API_KEY  }}' > app/src/main/res/values/secret.xml
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
