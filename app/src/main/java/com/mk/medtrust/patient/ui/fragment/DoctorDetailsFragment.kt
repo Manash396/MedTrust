@@ -191,7 +191,9 @@ class DoctorDetailsFragment : Fragment() {
 
             val slots = generateSlots(doctor.availability.startTime,doctor.availability.endTime,bookedSlots,dateItem)
             Timber.tag("Krishna").d("Slots: $slots")
-            // use timber in kotlin way don't use java style
+//            Timber.tag("Krishna").d("Slots: %s",slots)
+            // use timber in kotlin way don't use java
+            // style
 
 
             slotAdapter.updateNewList(slots)
