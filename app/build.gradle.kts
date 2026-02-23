@@ -25,6 +25,10 @@ android {
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
     }
 
+    lint {
+        baseline = file("lint-baseline.xml")
+    }
+
     buildTypes {
         release {
             isMinifyEnabled = false
@@ -81,6 +85,8 @@ dependencies {
     androidTestImplementation(libs.androidx.espresso.core)
 
     implementation(libs.hilt.android)
+    implementation("com.jakewharton.timber:timber:5.0.1")
+
     ksp(libs.hilt.compiler)
 
 }

@@ -3,7 +3,6 @@ package com.mk.medtrust.patient.ui.fragment
 import android.content.Intent
 import android.graphics.Color
 import android.os.Bundle
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -106,7 +105,7 @@ class DoctorDetailsFragment : Fragment() {
         viewModel.doctorBookings.observe(viewLifecycleOwner){result ->
             when(result){
                 is Result.Error -> {
-                    Log.d("Krishna",result.message)
+//                    Log.d("Krishna",result.message)
                     Toast.makeText(requireContext(),result.message, Toast.LENGTH_LONG).show()
                     hideLoader()
                 }
@@ -125,7 +124,7 @@ class DoctorDetailsFragment : Fragment() {
         viewModel.bookingState.observe(viewLifecycleOwner){result ->
             when(result){
                 is Result.Error -> {
-                    Log.d("Krishna",result.message)
+//                    Log.d("Krishna",result.message)
                     Toast.makeText(requireContext(),result.message, Toast.LENGTH_LONG).show()
                 }
                Result.Loading -> {
@@ -174,7 +173,7 @@ class DoctorDetailsFragment : Fragment() {
                 slotId = slotId
             )
             appointment = appmt
-            Log.d("Krishna",appointment.toString())
+//            Log.d("Krishna",appointment.toString())
         }
 //        binding.slotRecyclerView.layoutManager = GridLayoutManager(requireContext(),3)
 //        binding.slotRecyclerView.adapter = slotAdapter
@@ -185,13 +184,17 @@ class DoctorDetailsFragment : Fragment() {
             // to access on going appointments on that day from firestore
             val dateId = String.format(Locale.ENGLISH,"%02d_%02d_%04d", dateItem.dayOfMonth, dateItem.monthOfYear, dateItem.year)
 
-            Log.d("Krishna",dateId)
+//            Log.d("Krishna",dateId)
             val ap = appointmentMapByDate[dateId]
             val bookedSlots = ap?.map { appointment -> appointment.slotTime } ?: emptyList()
 
 
             val slots = generateSlots(doctor.availability.startTime,doctor.availability.endTime,bookedSlots,dateItem)
-            Timber.tag("Krishna").d(slots.toString())
+            Timber.tag("Krishna").d("Slots: $slots")
+//            Timber.tag("Krishna").d("Slots: %s",slots)
+            // use timber in kotlin way don't use java
+            // style
+
 
             slotAdapter.updateNewList(slots)
             appointment = null // resetting for new
@@ -277,7 +280,7 @@ class DoctorDetailsFragment : Fragment() {
                 slotDate,
                 current
             )
-            Timber.tag("Krishna").d(slotDateTime.toString())
+//            Timber.tag("Krishna").d(slotDateTime.toString())
             val isAvailable = !bookedSlots.contains(displayTime) && slotDateTime.isAfter(now)
 
             slots.add(

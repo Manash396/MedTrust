@@ -1,0 +1,4839 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<issues format="6" by="lint 8.13.2" type="baseline" client="gradle" dependencies="false" name="AGP (8.13.2)" variant="all" version="8.13.2">
+
+    <issue
+        id="UnknownId"
+        message="The id &quot;`tvDate`&quot; is not defined anywhere."
+        errorLine1="            app:layout_constraintTop_toTopOf=&quot;@+id/tvDate&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/history_appointment_item.xml"
+            line="131"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="DefaultLocale"
+        message="Implicitly using the default locale is a common source of bugs: Use `String.format(Locale, ...)` instead"
+        errorLine1="        return String.format(&quot;%02d:%02d %s&quot;, hour12, minute, amPm)"
+        errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/ProfileDoctorFragment.kt"
+            line="472"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="IncludeLayoutParam"
+        message="Layout parameter `layout_gravity` ignored unless both `layout_width` and `layout_height` are also specified on `&lt;include>` tag"
+        errorLine1="        android:layout_gravity=&quot;center&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="13"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="SelectedPhotoAccess"
+        message="Your app is currently not handling Selected Photos Access introduced in Android 14+"
+        errorLine1="    &lt;uses-permission android:name=&quot;android.permission.READ_MEDIA_IMAGES&quot; />"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:/Users/91813/.gradle/caches/8.13/transforms/7bc5c467d350fad34008a00a9180de80/transformed/zego_uikit_android-3.6.5/AndroidManifest.xml"
+            line="16"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="SelectedPhotoAccess"
+        message="Your app is currently not handling Selected Photos Access introduced in Android 14+"
+        errorLine1="    &lt;uses-permission android:name=&quot;android.permission.READ_MEDIA_VIDEO&quot; />"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="C:/Users/91813/.gradle/caches/8.13/transforms/7bc5c467d350fad34008a00a9180de80/transformed/zego_uikit_android-3.6.5/AndroidManifest.xml"
+            line="18"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="AndroidGradlePluginVersion"
+        message="A newer version of com.android.application than 8.13.2 is available: 9.0.1"
+        errorLine1="agp = &quot;8.13.2&quot;"
+        errorLine2="      ~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="2"
+            column="7"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-livedata-ktx than 2.7.0 is available: 2.10.0"
+        errorLine1="    implementation(&quot;androidx.lifecycle:lifecycle-livedata-ktx:2.7.0&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="73"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.lifecycle:lifecycle-viewmodel-ktx than 2.7.0 is available: 2.10.0"
+        errorLine1="    implementation(&quot;androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="74"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.activity:activity than 1.11.0 is available: 1.12.4"
+        errorLine1="activity = &quot;1.11.0&quot;"
+        errorLine2="           ~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="11"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.android.libraries.identity.googleid:googleid than 1.1.1 is available: 1.2.0"
+        errorLine1="googleid = &quot;1.1.1&quot;"
+        errorLine2="           ~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="17"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of com.google.firebase:firebase-firestore than 26.0.2 is available: 26.1.0"
+        errorLine1="firebaseFirestore = &quot;26.0.2&quot;"
+        errorLine2="                    ~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="18"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-fragment-ktx than 2.9.6 is available: 2.9.7"
+        errorLine1="navigationFragmentKtx = &quot;2.9.6&quot;"
+        errorLine2="                        ~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="19"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation:navigation-ui-ktx than 2.9.6 is available: 2.9.7"
+        errorLine1="navigationUiKtx = &quot;2.9.6&quot;"
+        errorLine2="                  ~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="20"
+            column="19"/>
+    </issue>
+
+    <issue
+        id="GradleDependency"
+        message="A newer version of androidx.navigation.safeargs.kotlin than 2.7.7 is available: 2.9.7"
+        errorLine1="androidx-navigation-safeargs = { id = &quot;androidx.navigation.safeargs.kotlin&quot;, version = &quot;2.7.7&quot; }"
+        errorLine2="                                                                                       ~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="56"
+            column="88"/>
+    </issue>
+
+    <issue
+        id="GradleDynamicVersion"
+        message="Avoid using + in version numbers; can lead to unpredictable and unrepeatable builds (im.zego:zego_uikit_prebuilt_call_android:+)"
+        errorLine1="    implementation(&quot;im.zego:zego_uikit_prebuilt_call_android:+&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="75"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.razorpay:checkout than 1.6.40 is available: 1.6.41"
+        errorLine1="    implementation(&quot;com.razorpay:checkout:1.6.40&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="72"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.google.truth:truth than 1.1.5 is available: 1.4.5"
+        errorLine1="    testImplementation(&quot;com.google.truth:truth:1.1.5&quot;)"
+        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="80"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.google.truth:truth than 1.1.5 is available: 1.4.5"
+        errorLine1="    androidTestImplementation(&quot;com.google.truth:truth:1.1.5&quot;)"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="83"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of org.jetbrains.kotlin.android than 2.2.21 is available: 2.3.10"
+        errorLine1="kotlin = &quot;2.2.21&quot;"
+        errorLine2="         ~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="4"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.google.dagger.hilt.android than 2.57.2 is available: 2.59.2"
+        errorLine1="hilt = &quot;2.57.2&quot;"
+        errorLine2="       ~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="21"
+            column="8"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.google.dagger:hilt-android than 2.57.2 is available: 2.59.2"
+        errorLine1="hilt = &quot;2.57.2&quot;"
+        errorLine2="       ~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="21"
+            column="8"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of com.google.dagger:hilt-compiler than 2.57.2 is available: 2.59.2"
+        errorLine1="hilt = &quot;2.57.2&quot;"
+        errorLine2="       ~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="21"
+            column="8"/>
+    </issue>
+
+    <issue
+        id="NewerVersionAvailable"
+        message="A newer version of junit:junit than 4.12 is available: 4.13.2"
+        errorLine1="junitJunit = &quot;4.12&quot;"
+        errorLine2="             ~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="23"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="SimilarGradleDependency"
+        message="There are multiple dependencies junit:junit but with different version"
+        errorLine1="junit = { group = &quot;junit&quot;, name = &quot;junit&quot;, version.ref = &quot;junit&quot; }"
+        errorLine2="         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="32"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="SimilarGradleDependency"
+        message="There are multiple dependencies junit:junit but with different version"
+        errorLine1="junit-junit = { group = &quot;junit&quot;, name = &quot;junit&quot;, version.ref = &quot;junitJunit&quot; }"
+        errorLine2="               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="../gradle/libs.versions.toml"
+            line="46"
+            column="16"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="            Log.d(&quot;KrishnaMk&quot;,medicines.toString())"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/AppointmentDetailOnFragment.kt"
+            line="229"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="        Log.d(&quot;KrishnaMk&quot;,medicines.toString())"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/AppointmentDetailOnFragment.kt"
+            line="420"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="        Log.d(&quot;KrishnaMk&quot;, medicines.toString())"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/AppointmentDetailPFragment.kt"
+            line="287"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="                    Log.d(&quot;KrishnaMK&quot;,result.data.toString())"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/AppointmentListCurFragment.kt"
+            line="78"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="                Log.d(&quot;Krishna &quot;, appUser.toString())"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/auth/data/repository/AuthRepository.kt"
+            line="138"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="            Log.d(&quot;Krishna&quot;,dateSnapshot.toString())"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/repository/DoctorRepository.kt"
+            line="82"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="        Log.d(&quot;mse&quot;,now.toString())"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/viewmodel/DoctorSharedViewModel.kt"
+            line="34"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="        Log.d(&quot;KrishnaMK&quot;, &quot;$appointments $newList&quot;)"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/adapter/HistoryDAdapter.kt"
+            line="43"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="        Log.d(&quot;Krishna&quot;,list.toString())"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/HistoryDFragment.kt"
+            line="124"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="                    Log.d(&quot;KrishnaMk&quot;,result.message)"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/HomeFragmentD.kt"
+            line="114"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="        Log.d(&quot;krishna&quot;, &quot;found&quot;)"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/auth/ui/fragment/LoginFragment.kt"
+            line="51"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="        Log.d(&quot;Krishna&quot;,callID)"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/PatientCallActivity.kt"
+            line="37"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="            Log.d(&quot;Krishna&quot;,dateSnapshot.toString())"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/repository/PatientRepository.kt"
+            line="130"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="            Log.d(&quot;Krishna&quot;,appointmentSnapshot.toString())"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/repository/PatientRepository.kt"
+            line="163"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="        Log.d(&quot;mse&quot;,now.toString())"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/viewmodel/PatientSharedViewModel.kt"
+            line="38"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="        Log.d(&quot;Krishna&quot;,p1.toString())"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/PaymentActivity.kt"
+            line="75"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="LogNotTimber"
+        message="Using &apos;Log&apos; instead of &apos;Timber&apos;"
+        errorLine1="        Log.d(&quot;KrishnaMk&quot;,uri.toString())"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/util/UtilObject.kt"
+            line="140"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/adapter/AppointmentAdapter.kt"
+            line="54"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/AppointmentAdapterP.kt"
+            line="59"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="                notifyDataSetChanged()"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/DateAdapter.kt"
+            line="35"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/DateAdapter.kt"
+            line="54"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/DoctorListAdapter.kt"
+            line="62"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/adapter/HistoryDAdapter.kt"
+            line="45"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/HistoryListAdapter.kt"
+            line="48"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="                    notifyDataSetChanged()"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/SlotAdapter.kt"
+            line="35"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="NotifyDataSetChanged"
+        message="It will always be more efficient to use more specific change events if you can. Rely on `notifyDataSetChanged` as a last resort."
+        errorLine1="        notifyDataSetChanged()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/SlotAdapter.kt"
+            line="47"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="ObsoleteLayoutParam"
+        message="Invalid layout param in a `FrameLayout`: `layout_weight`"
+        errorLine1="                                android:layout_weight=&quot;1&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="436"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="ObsoleteSdkInt"
+        message="This folder configuration (`v26`) is unnecessary; `minSdkVersion` is 26. Merge all the resources in this folder into `mipmap-anydpi`.">
+        <location
+            file="src/main/res/mipmap-anydpi-v26"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="                        &lt;LinearLayout"
+        errorLine2="                         ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="213"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="                        &lt;LinearLayout"
+        errorLine2="                         ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="261"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="                            &lt;LinearLayout"
+        errorLine2="                             ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="459"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="9"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="10"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="        &lt;LinearLayout"
+        errorLine2="         ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/history_appointment_item.xml"
+            line="69"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="        &lt;LinearLayout"
+        errorLine2="         ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_appointment.xml"
+            line="58"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="UseCompoundDrawables"
+        message="This tag and its children can be replaced by one `&lt;TextView/>` and a compound drawable"
+        errorLine1="        &lt;LinearLayout"
+        errorLine2="         ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="43"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="DisableBaselineAlignment"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance"
+        errorLine1="                    &lt;LinearLayout"
+        errorLine2="                     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="481"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="DisableBaselineAlignment"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="12"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="DisableBaselineAlignment"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="67"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="DisableBaselineAlignment"
+        message="Set `android:baselineAligned=&quot;false&quot;` on this element for better performance"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="118"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/white&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/activity_main.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_skeleton.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appt_detail_d_skeleton.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appt_history_p.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/black&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_details.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/white&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_edit_patient_profile.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_history_d.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/black&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/black&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/white&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_login.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/white` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/white&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_patient_registration.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/black&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `@color/black` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;@color/black&quot;>"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="8"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `#12262D` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;#12262D&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_medicine_presc.xml"
+            line="6"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="Overdraw"
+        message="Possible overdraw: Root element paints background `#12262D` with a theme that also paints a background (inferred theme is `@style/Theme.MedTrust`)"
+        errorLine1="    android:background=&quot;#12262D&quot;"
+        errorLine2="    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="7"
+            column="5"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.bg_edit_text_underline` appears to be unused"
+        errorLine1="&lt;layer-list xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/bg_edit_text_underline.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.gray` appears to be unused"
+        errorLine1="    &lt;color name=&quot;gray&quot;>#FFFFF000&lt;/color>"
+        errorLine2="           ~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/colors.xml"
+            line="5"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.font.font_family` appears to be unused"
+        errorLine1="&lt;font-family xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/font/font_family.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.ic_launcher` appears to be unused">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher.webp"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_launcher_background` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_launcher_background.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.ic_launcher_foreground` appears to be unused"
+        errorLine1="&lt;vector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/ic_launcher_foreground.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.mipmap.ic_launcher_round` appears to be unused">
+        <location
+            file="src/main/res/mipmap-hdpi/ic_launcher_round.webp"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.login_text_toggle` appears to be unused"
+        errorLine1="&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/color/login_text_toggle.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.drawable.login_toggle_bg` appears to be unused"
+        errorLine1="&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/drawable/login_toggle_bg.xml"
+            line="1"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.string.hello_blank_fragment` appears to be unused"
+        errorLine1="    &lt;string name=&quot;hello_blank_fragment&quot;>Hello blank fragment&lt;/string>"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/strings.xml"
+            line="4"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.OutlineTextField` appears to be unused"
+        errorLine1="    &lt;style name=&quot;OutlineTextField&quot; parent=&quot;Widget.MaterialComponents.TextInputLayout.OutlinedBox&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="4"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.style.HintTextStyle` appears to be unused"
+        errorLine1="    &lt;style name=&quot;HintTextStyle&quot; parent=&quot;TextAppearance.MaterialComponents.Body1&quot;>"
+        errorLine2="           ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/values/styles.xml"
+            line="21"
+            column="12"/>
+    </issue>
+
+    <issue
+        id="UnusedResources"
+        message="The resource `R.color.toggle_btn_bg` appears to be unused"
+        errorLine1="&lt;selector xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/color/toggle_btn_bg.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `LinearLayout` parent is unnecessary; transfer the `background` attribute to the other view"
+        errorLine1="                        &lt;LinearLayout"
+        errorLine2="                         ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="492"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="UselessParent"
+        message="This `LinearLayout` layout or its `LinearLayout` parent is possibly unnecessary"
+        errorLine1="    &lt;LinearLayout"
+        errorLine2="     ~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/progress_layout.xml"
+            line="9"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="TooDeepLayout"
+        message="`fragment_appointment_detail_on.xml` has more than 10 levels, bad for performance"
+        errorLine1="                                    &lt;EditText"
+        errorLine2="                                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="329"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="MonochromeLauncherIcon"
+        message="The application adaptive icon is missing a monochrome tag"
+        errorLine1="&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/mipmap-anydpi-v26/app_logo.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="MonochromeLauncherIcon"
+        message="The application adaptive roundIcon is missing a monochrome tag"
+        errorLine1="&lt;adaptive-icon xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;>"
+        errorLine2="^">
+        <location
+            file="src/main/res/mipmap-anydpi-v26/app_logo_round.xml"
+            line="2"
+            column="1"/>
+    </issue>
+
+    <issue
+        id="IconLocation"
+        message="Found bitmap drawable `res/drawable/statescope_logo.png` in densityless folder">
+        <location
+            file="src/main/res/drawable/statescope_logo.png"/>
+    </issue>
+
+    <issue
+        id="TextFields"
+        message="This text field does not specify an `inputType`"
+        errorLine1="                            &lt;EditText"
+        errorLine2="                             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="242"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="TextFields"
+        message="This text field does not specify an `inputType`"
+        errorLine1="                                    &lt;EditText"
+        errorLine2="                                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="329"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="TextFields"
+        message="This text field does not specify an `inputType`"
+        errorLine1="                                        &lt;EditText"
+        errorLine2="                                         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="368"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="TextFields"
+        message="This text field does not specify an `inputType`"
+        errorLine1="                                        &lt;EditText"
+        errorLine2="                                         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="401"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="TextFields"
+        message="This text field does not specify an `inputType`"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="67"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="TextFields"
+        message="This text field does not specify an `inputType`"
+        errorLine1="                &lt;EditText"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_edit_patient_profile.xml"
+            line="56"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="TextFields"
+        message="This text field does not specify an `inputType`"
+        errorLine1="                &lt;EditText"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_edit_patient_profile.xml"
+            line="81"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                            &lt;EditText"
+        errorLine2="                             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="242"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                                    &lt;EditText"
+        errorLine2="                                     ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="329"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                                        &lt;EditText"
+        errorLine2="                                         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="368"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                                        &lt;EditText"
+        errorLine2="                                         ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="401"
+            column="42"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="            &lt;EditText"
+        errorLine2="             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="67"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                &lt;EditText"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_edit_patient_profile.xml"
+            line="56"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                &lt;EditText"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_edit_patient_profile.xml"
+            line="81"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                &lt;EditText"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_edit_patient_profile.xml"
+            line="107"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                &lt;EditText"
+        errorLine2="                 ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_edit_patient_profile.xml"
+            line="214"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                            &lt;EditText"
+        errorLine2="                             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="361"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="Autofill"
+        message="Missing `autofillHints` attribute"
+        errorLine1="                            &lt;EditText"
+        errorLine2="                             ~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="442"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?"
+        errorLine1="        preferences.edit().putString(key, value).apply()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/util/AppPreferences.kt"
+            line="22"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?"
+        errorLine1="        preferences.edit().putBoolean(key, value).apply()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/util/AppPreferences.kt"
+            line="26"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?"
+        errorLine1="        preferences.edit().putInt(key, value).apply()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/util/AppPreferences.kt"
+            line="30"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?"
+        errorLine1="        preferences.edit().remove(key).apply()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/util/AppPreferences.kt"
+            line="48"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UseKtx"
+        message="Use the KTX extension function `SharedPreferences.edit` instead?"
+        errorLine1="        preferences.edit().clear().apply()"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/util/AppPreferences.kt"
+            line="52"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;com.razorpay:checkout:1.6.40&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="72"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;androidx.lifecycle:lifecycle-livedata-ktx:2.7.0&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="73"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="74"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    implementation(&quot;com.facebook.shimmer:shimmer:0.5.0&quot;)"
+        errorLine2="                   ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="76"
+            column="20"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    testImplementation(&quot;com.google.truth:truth:1.1.5&quot;)"
+        errorLine2="                       ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="80"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="UseTomlInstead"
+        message="Use version catalog instead"
+        errorLine1="    androidTestImplementation(&quot;com.google.truth:truth:1.1.5&quot;)"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="build.gradle.kts"
+            line="83"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                                &lt;ImageView"
+        errorLine2="                                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="113"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                        &lt;ImageView"
+        errorLine2="                         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="143"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                            &lt;ImageView"
+        errorLine2="                             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="219"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                            &lt;ImageView"
+        errorLine2="                             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="268"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                                &lt;ImageView"
+        errorLine2="                                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="466"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                            &lt;ImageView"
+        errorLine2="                             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="528"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                            &lt;ImageView"
+        errorLine2="                             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="536"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                                &lt;ImageView"
+        errorLine2="                                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="96"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                                &lt;ImageView"
+        errorLine2="                                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="104"
+            column="34"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                        &lt;ImageView"
+        errorLine2="                         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="187"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                            &lt;ImageView"
+        errorLine2="                             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="307"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                            &lt;ImageView"
+        errorLine2="                             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="371"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                            &lt;ImageView"
+        errorLine2="                             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="435"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                    &lt;ImageView"
+        errorLine2="                     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_details.xml"
+            line="55"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="19"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="62"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="59"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="11"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="47"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="116"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="132"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="160"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="176"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="205"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                &lt;ImageView"
+        errorLine2="                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="248"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="11"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="37"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="58"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                &lt;ImageView"
+        errorLine2="                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="118"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                &lt;ImageView"
+        errorLine2="                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="160"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="200"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                    &lt;ImageView"
+        errorLine2="                     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="241"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="291"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                &lt;ImageView"
+        errorLine2="                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="327"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                &lt;ImageView"
+        errorLine2="                 ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="375"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_login.xml"
+            line="21"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="                    &lt;ImageView"
+        errorLine2="                     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="64"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="    &lt;ImageView"
+        errorLine2="     ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="11"
+            column="6"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="72"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/history_appointment_item.xml"
+            line="18"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/history_appointment_item.xml"
+            line="77"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_appointment.xml"
+            line="18"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_appointment.xml"
+            line="67"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_doctor.xml"
+            line="22"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_doctor.xml"
+            line="107"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="        &lt;ImageView"
+        errorLine2="         ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_medicine.xml"
+            line="87"
+            column="10"/>
+    </issue>
+
+    <issue
+        id="ContentDescription"
+        message="Missing `contentDescription` attribute on image"
+        errorLine1="            &lt;ImageView"
+        errorLine2="             ~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="50"
+            column="14"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        itemBinding.btnStart.text = &quot;Join&quot;"
+        errorLine2="                                     ~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/AppointmentAdapterP.kt"
+            line="22"
+            column="38"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            tvName.text = &quot;Dr ${ap.doctorName}&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/AppointmentAdapterP.kt"
+            line="30"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            tvName.text = &quot;Dr ${ap.doctorName}&quot;"
+        errorLine2="                           ~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/AppointmentAdapterP.kt"
+            line="30"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            Age.text = &quot;, $age years old&quot;"
+        errorLine2="                       ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/AppointmentDetailOnFragment.kt"
+            line="147"
+            column="24"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            Age.text = &quot;, $age years old&quot;"
+        errorLine2="                              ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/AppointmentDetailOnFragment.kt"
+            line="147"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                btnPrescriptionSubmit.text = &quot;Update Prescription&quot;"
+        errorLine2="                                              ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/AppointmentDetailOnFragment.kt"
+            line="167"
+            column="47"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                dobAndGender.text = &quot;${pres.patientGender} , ${pres.patientDob}&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/AppointmentDetailOnFragment.kt"
+            line="221"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                doctorName.text = &quot;Dr ${appointmentCurrent.doctorName}&quot;"
+        errorLine2="                                  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/AppointmentDetailOnFragment.kt"
+            line="223"
+            column="35"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                doctorName.text = &quot;Dr ${appointmentCurrent.doctorName}&quot;"
+        errorLine2="                                   ~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/AppointmentDetailOnFragment.kt"
+            line="223"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                itemMedicinePrescBinding.medinceADose.text = &quot;${medicine.name}, ${medicine.dose}&quot;"
+        errorLine2="                                                             ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/AppointmentDetailOnFragment.kt"
+            line="237"
+            column="62"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            dobAndGender.text = &quot;${pres.patientGender} , ${pres.patientDob}&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/AppointmentDetailOnFragment.kt"
+            line="411"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            doctorName.text = &quot;Dr ${appointmentCurrent.doctorName}&quot;"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/AppointmentDetailOnFragment.kt"
+            line="413"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            doctorName.text = &quot;Dr ${appointmentCurrent.doctorName}&quot;"
+        errorLine2="                               ~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/AppointmentDetailOnFragment.kt"
+            line="413"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            itemMedicinePrescBinding.medinceADose.text = &quot;${medicine.name}, ${medicine.dose}&quot;"
+        errorLine2="                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/AppointmentDetailOnFragment.kt"
+            line="428"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            dobAndGender.text = &quot;${pres.patientGender} , ${pres.patientDob}&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/AppointmentDetailPFragment.kt"
+            line="278"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            doctorName.text = &quot;Dr ${appointmentCurrent?.doctorName}&quot;"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/AppointmentDetailPFragment.kt"
+            line="280"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            doctorName.text = &quot;Dr ${appointmentCurrent?.doctorName}&quot;"
+        errorLine2="                               ~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/AppointmentDetailPFragment.kt"
+            line="280"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            itemMedicinePrescBinding.medinceADose.text = &quot;${medicine.name}, ${medicine.dose}&quot;"
+        errorLine2="                                                         ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/AppointmentDetailPFragment.kt"
+            line="295"
+            column="58"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Number formatting does not take into account locale settings. Consider using `String.format` instead."
+        errorLine1="            date.text = dateItem.dayOfMonth.toString()"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/DateAdapter.kt"
+            line="25"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            name.text = &quot;Dr ${doctor.name}&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/DoctorDetailsFragment.kt"
+            line="152"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            name.text = &quot;Dr ${doctor.name}&quot;"
+        errorLine2="                         ~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/DoctorDetailsFragment.kt"
+            line="152"
+            column="26"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            experience.text = &quot;${doctor.experience} \nExperience&quot;"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/DoctorDetailsFragment.kt"
+            line="155"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            experience.text = &quot;${doctor.experience} \nExperience&quot;"
+        errorLine2="                                                      ~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/DoctorDetailsFragment.kt"
+            line="155"
+            column="55"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            rating.text = &quot;${doctor.rating}\nRating&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/DoctorDetailsFragment.kt"
+            line="156"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            rating.text = &quot;${doctor.rating}\nRating&quot;"
+        errorLine2="                                             ~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/DoctorDetailsFragment.kt"
+            line="156"
+            column="46"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            description.text = &quot;Dr. ${doctor.name} is a highly experienced ${doctor.specialisation} with&quot; +"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/DoctorDetailsFragment.kt"
+            line="157"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            description.text = &quot;Dr. ${doctor.name} is a highly experienced ${doctor.specialisation} with&quot; +"
+        errorLine2="                               ^">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/DoctorDetailsFragment.kt"
+            line="157"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            description.text = &quot;Dr. ${doctor.name} is a highly experienced ${doctor.specialisation} with&quot; +"
+        errorLine2="                                ~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/DoctorDetailsFragment.kt"
+            line="157"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            description.text = &quot;Dr. ${doctor.name} is a highly experienced ${doctor.specialisation} with&quot; +"
+        errorLine2="                                                  ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/DoctorDetailsFragment.kt"
+            line="157"
+            column="51"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            description.text = &quot;Dr. ${doctor.name} is a highly experienced ${doctor.specialisation} with&quot; +"
+        errorLine2="                                                                                                   ~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/DoctorDetailsFragment.kt"
+            line="157"
+            column="100"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                    &quot; over ${doctor.experience} of expertise.&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/DoctorDetailsFragment.kt"
+            line="158"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    &quot; over ${doctor.experience} of expertise.&quot;"
+        errorLine2="                     ~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/DoctorDetailsFragment.kt"
+            line="158"
+            column="22"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                    &quot; over ${doctor.experience} of expertise.&quot;"
+        errorLine2="                                               ~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/DoctorDetailsFragment.kt"
+            line="158"
+            column="48"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                tvDoctorName.text =&quot;Dr ${doctor.name}&quot;"
+        errorLine2="                                   ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/DoctorListAdapter.kt"
+            line="26"
+            column="36"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                tvDoctorName.text =&quot;Dr ${doctor.name}&quot;"
+        errorLine2="                                    ~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/DoctorListAdapter.kt"
+            line="26"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            btnStart.text = &quot;View&quot;"
+        errorLine2="                             ~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/adapter/HistoryDAdapter.kt"
+            line="30"
+            column="30"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            tvName.text = &quot;Dr ${ap.doctorName}&quot;"
+        errorLine2="                          ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/HistoryListAdapter.kt"
+            line="31"
+            column="27"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            tvName.text = &quot;Dr ${ap.doctorName}&quot;"
+        errorLine2="                           ~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/adapter/HistoryListAdapter.kt"
+            line="31"
+            column="28"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        binding.tvHello.text = &quot;Dr. ${AppPreferences.getString(AppConstant.USERNAME)}&quot;"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/HomeFragmentD.kt"
+            line="57"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        binding.tvHello.text = &quot;Dr. ${AppPreferences.getString(AppConstant.USERNAME)}&quot;"
+        errorLine2="                                ~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/HomeFragmentD.kt"
+            line="57"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="            pendingApp.text = &quot;${list.size} pending&quot;"
+        errorLine2="                              ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/HomeFragmentD.kt"
+            line="74"
+            column="31"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="            pendingApp.text = &quot;${list.size} pending&quot;"
+        errorLine2="                                           ~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/HomeFragmentD.kt"
+            line="74"
+            column="44"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="        binding.tvHello.text = &quot;Hello, ${AppPreferences.getString(&quot;userName&quot;)}&quot;"
+        errorLine2="                               ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/HomeFragmentP.kt"
+            line="49"
+            column="32"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="        binding.tvHello.text = &quot;Hello, ${AppPreferences.getString(&quot;userName&quot;)}&quot;"
+        errorLine2="                                ~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/patient/ui/fragment/HomeFragmentP.kt"
+            line="49"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="Do not concatenate text displayed with `setText`. Use resource string with placeholders."
+        errorLine1="                &quot;Dr. ${AppPreferences.getString(AppConstant.USERNAME)}&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/ProfileDoctorFragment.kt"
+            line="389"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="SetTextI18n"
+        message="String literal in `setText` can not be translated. Use Android resources instead."
+        errorLine1="                &quot;Dr. ${AppPreferences.getString(AppConstant.USERNAME)}&quot;"
+        errorLine2="                 ~~~~">
+        <location
+            file="src/main/java/com/mk/medtrust/doctor/ui/fragment/ProfileDoctorFragment.kt"
+            line="389"
+            column="18"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Appointments Details&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Appointments Details&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="30"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;PATIENT&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;PATIENT&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="91"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Sarah Wilson&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;Sarah Wilson&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="101"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Male&quot;, should use `@string` resource"
+        errorLine1="                                    android:text=&quot;Male&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="123"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;, 23 years old&quot;, should use `@string` resource"
+        errorLine1="                                    android:text=&quot;, 23 years old&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="133"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Start a Video Call&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Start a Video Call&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="163"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Appointment Completed &quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Appointment Completed &quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="184"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;CLINICAL NOTES&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;CLINICAL NOTES&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="228"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Enter diagonsis and clinical findings...&quot;, should use `@string` resource"
+        errorLine1="                                android:hint=&quot;Enter diagonsis and clinical findings...&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="246"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;MEDICINES&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;MEDICINES&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="279"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;ADD NEW MEDICATION&quot;, should use `@string` resource"
+        errorLine1="                                    android:text=&quot;ADD NEW MEDICATION&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="312"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Medicine Name (e.g. Paracetamol)&quot;, should use `@string` resource"
+        errorLine1="                                        android:hint=&quot;Medicine Name (e.g. Paracetamol)&quot;"
+        errorLine2="                                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="333"
+            column="41"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Dose (e.g. 500mg)&quot;, should use `@string` resource"
+        errorLine1="                                            android:hint=&quot;Dose (e.g. 500mg)&quot;"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="372"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Frequency (e.g. 2 times a day)&quot;, should use `@string` resource"
+        errorLine1="                                            android:hint=&quot;Frequency (e.g. 2 times a day)&quot;"
+        errorLine2="                                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="405"
+            column="45"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Add to List&quot;, should use `@string` resource"
+        errorLine1="                                    android:text=&quot;Add to List&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="431"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;This prescription will be digitally signed and sent to the patient&quot;, should use `@string` resource"
+        errorLine1="                                    android:text=&quot;This prescription will be digitally signed and sent to the patient&quot;"
+        errorLine2="                                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="477"
+            column="37"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Submit Prescription&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Submit Prescription&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="491"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Prescription&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;Prescription&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_on.xml"
+            line="521"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Appointments Details&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Appointments Details&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="30"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;UPCOMING&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;UPCOMING&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="130"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Appointment Status&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;Appointment Status&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="138"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Dr. Sarah Wilson&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;Dr. Sarah Wilson&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="204"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Cardiologist&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;Cardiologist&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="213"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;General Hospital, NYC&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;General Hospital, NYC&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="221"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Join a Video Call&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Join a Video Call&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="239"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Download Prescription&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Download Prescription&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="258"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Consultation Summary&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Consultation Summary&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="277"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;October 24, 2050&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;October 24, 2050&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="328"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Appointment Date&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;Appointment Date&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="336"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;10:30 AM&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;10:30 AM&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="392"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Slot Time&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;Slot Time&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="400"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;30 minutes&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;30 minutes&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="455"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Duration&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;Duration&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="463"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Strictly follow the prescription provided after the video call.&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;Strictly follow the prescription provided after the video call.&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_detail_p.xml"
+            line="510"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Appointments&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Appointments&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_list_cur.xml"
+            line="30"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Your Schedule&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Your Schedule&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_list_cur.xml"
+            line="53"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Total Appointments for today: &quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Total Appointments for today: &quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_list_cur.xml"
+            line="70"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;13&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;13&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_list_cur.xml"
+            line="81"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;No Appointments&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;No Appointments&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_list_cur.xml"
+            line="107"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Appointments&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Appointments&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appointment_list_p.xml"
+            line="30"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Appointment History&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Appointment History&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appt_history_p.xml"
+            line="30"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;No History&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;No History&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_appt_history_p.xml"
+            line="46"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Dr. Sarah Wilson&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Dr. Sarah Wilson&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_details.xml"
+            line="73"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Cardiologist&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Cardiologist&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_details.xml"
+            line="85"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;General Hospital, NYC&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;General Hospital, NYC&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_details.xml"
+            line="93"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;1k+\nPatients&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;1k+\nPatients&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_details.xml"
+            line="113"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;10+\nYears&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;10+\nYears&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_details.xml"
+            line="122"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;4.8\nRating&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;4.8\nRating&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_details.xml"
+            line="132"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;About Doctor&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;About Doctor&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_details.xml"
+            line="142"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Dr. Sarah Wilson is a highly experienced cardiologist with over 10 years of expertise in treating heart diseases.&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Dr. Sarah Wilson is a highly experienced cardiologist with over 10 years of expertise in treating heart diseases.&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_details.xml"
+            line="151"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Availability&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Availability&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_details.xml"
+            line="159"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Total Price&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Total Price&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_details.xml"
+            line="243"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;$45.00&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;$45.00&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_details.xml"
+            line="253"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Book Appointment&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Book Appointment&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_details.xml"
+            line="267"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Find Doctors&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Find Doctors&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="33"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Search doctor by name&quot;, should use `@string` resource"
+        errorLine1="                android:hint=&quot;Search doctor by name&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="74"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;All&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;All&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="111"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;General Physician&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;General Physician&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="127"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Dermatologist&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Dermatologist&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="143"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Gynecologist&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Gynecologist&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="159"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Sexual Wellness&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Sexual Wellness&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="175"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Dietitian&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Dietitian&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="191"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Paediatrician&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Paediatrician&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="207"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Top Doctors&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Top Doctors&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="230"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Sort by&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Sort by&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_list.xml"
+            line="242"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Back&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;Back&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="20"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Create Account&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Create Account&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="29"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Doctor Registration&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Doctor Registration&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="75"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Full Name&quot;, should use `@string` resource"
+        errorLine1="                android:hint=&quot;Full Name&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="88"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Email Address&quot;, should use `@string` resource"
+        errorLine1="                android:hint=&quot;Email Address&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="129"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Contact Number&quot;, should use `@string` resource"
+        errorLine1="                android:hint=&quot;Contact Number&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="162"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Medical License Number&quot;, should use `@string` resource"
+        errorLine1="                android:hint=&quot;Medical License Number&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="195"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Specialization&quot;, should use `@string` resource"
+        errorLine1="                android:hint=&quot;Specialization&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="227"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Hospital Name&quot;, should use `@string` resource"
+        errorLine1="                android:hint=&quot;Hospital Name&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="264"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Password&quot;, should use `@string` resource"
+        errorLine1="                android:hint=&quot;Password&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="296"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Confirm Password&quot;, should use `@string` resource"
+        errorLine1="                android:hint=&quot;Confirm Password&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="330"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Your information is encrypted and secure.&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Your information is encrypted and secure.&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="355"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Create Account&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Create Account&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_doctor_registration.xml"
+            line="368"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Male&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Male&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_edit_patient_profile.xml"
+            line="146"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Female&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Female&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_edit_patient_profile.xml"
+            line="154"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Other&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Other&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_edit_patient_profile.xml"
+            line="162"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Patient&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Patient&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_edit_patient_profile.xml"
+            line="190"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Doctor&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Doctor&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_edit_patient_profile.xml"
+            line="198"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Save Changes&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Save Changes&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_edit_patient_profile.xml"
+            line="243"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;History&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;History&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_history_d.xml"
+            line="30"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Appointments History&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Appointments History&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_history_d.xml"
+            line="54"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;No Appointments&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;No Appointments&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_history_d.xml"
+            line="78"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Hello, Jessica!&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Hello, Jessica!&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="28"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;How are you feeling today?&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;How are you feeling today?&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="40"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Healthcare made easy&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Healthcare made easy&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="78"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Start a video consultation and get quality treatment from the comfort of home.&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Start a video consultation and get quality treatment from the comfort of home.&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="86"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Disease Prediction&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Disease Prediction&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="124"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Book a new consultation&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Book a new consultation&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="168"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;My Records&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;My Records&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="213"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Ongoing&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Ongoing&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home.xml"
+            line="270"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Hello,Dr. Lorence!&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Hello,Dr. Lorence!&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="28"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Have a great shift today?&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Have a great shift today?&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="50"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;AI Scan for X-rays&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;AI Scan for X-rays&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="89"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Upload patient X-rays for instant Ai-\nassisted analysis and preliminary\n    diagnosis report&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Upload patient X-rays for instant Ai-\nassisted analysis and preliminary\n    diagnosis report&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="98"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Start Scan&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Start Scan&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="112"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Appointments\nManage your Schedule&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Appointments\nManage your Schedule&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="172"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;3 pending&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;3 pending&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="190"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Ongoing Session&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Ongoing Session&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="270"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Live Now @12:30 PM&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Live Now @12:30 PM&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="281"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Patient Logs&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Patient Logs&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_home_d.xml"
+            line="338"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Email or Username&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Email or Username&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_login.xml"
+            line="105"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Password&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Password&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_login.xml"
+            line="135"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Back&quot;, should use `@string` resource"
+        errorLine1="            android:contentDescription=&quot;Back&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_patient_registration.xml"
+            line="22"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Create Account&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Create Account&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_patient_registration.xml"
+            line="31"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Patient Registration&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Patient Registration&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_patient_registration.xml"
+            line="65"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Securely create your patient profile to get started.&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Securely create your patient profile to get started.&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_patient_registration.xml"
+            line="80"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Full Name&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Full Name&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_patient_registration.xml"
+            line="93"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Email Address&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Email Address&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_patient_registration.xml"
+            line="124"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Password&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Password&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_patient_registration.xml"
+            line="156"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Confirm Password&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Confirm Password&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_patient_registration.xml"
+            line="189"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Date of Birth&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Date of Birth&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_patient_registration.xml"
+            line="222"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Gender&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Gender&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_patient_registration.xml"
+            line="257"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Mobile Number&quot;, should use `@string` resource"
+        errorLine1="            android:hint=&quot;Mobile Number&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_patient_registration.xml"
+            line="293"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Create Account&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Create Account&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_patient_registration.xml"
+            line="327"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;By creating an account, you agree to our Terms of Service and Privacy Policy.&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;By creating an account, you agree to our Terms of Service and Privacy Policy.&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_patient_registration.xml"
+            line="344"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Profile&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Profile&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="30"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Dr. Lorence&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Dr. Lorence&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="78"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Cardiologist&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Cardiologist&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="88"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;✔ Verified Doctor&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;✔ Verified Doctor&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="97"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Personal Information&quot;, should use `@string` resource"
+        errorLine1="                        android:text=&quot;Personal Information&quot;"
+        errorLine2="                        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="124"
+            column="25"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Email:&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Email:&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="140"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;dr.lorence@gmail.com&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;dr.lorence@gmail.com&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="153"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Phone:&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Phone:&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="170"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;+91 98765 43210&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;+91 98765 43210&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="183"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Professional Details&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Professional Details&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="218"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Cancel&quot;, should use `@string` resource"
+        errorLine1="                            android:contentDescription=&quot;Cancel&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="229"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Edit&quot;, should use `@string` resource"
+        errorLine1="                                android:contentDescription=&quot;Edit&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="246"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Edit&quot;, should use `@string` resource"
+        errorLine1="                                android:contentDescription=&quot;Edit&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="255"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Hospital:&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Hospital:&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="285"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;City Care Hospital&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;City Care Hospital&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="297"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Specialization:&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Specialization:&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="313"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Cardiology&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Cardiology&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="325"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Experience:&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Experience:&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="341"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;8 Years&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;8 Years&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="357"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;e.g. 8&quot;, should use `@string` resource"
+        errorLine1="                                android:hint=&quot;e.g. 8&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="368"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;License No:&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;License No:&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="391"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;MCI-123456&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;MCI-123456&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="403"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Consultation Fee:&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Consultation Fee:&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="419"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;₹600&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;₹600&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="438"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;e.g. 250&quot;, should use `@string` resource"
+        errorLine1="                                android:hint=&quot;e.g. 250&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="449"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Availability&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Availability&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="491"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Cancel&quot;, should use `@string` resource"
+        errorLine1="                            android:contentDescription=&quot;Cancel&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="502"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Edit&quot;, should use `@string` resource"
+        errorLine1="                                android:contentDescription=&quot;Edit&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="519"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Edit&quot;, should use `@string` resource"
+        errorLine1="                                android:contentDescription=&quot;Edit&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="528"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Mon – Fri&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;Mon – Fri&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="555"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;MON&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;MON&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="574"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TUE&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;TUE&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="587"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;WED&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;WED&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="600"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;THU&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;THU&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="613"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;FRI&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;FRI&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="626"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;SAT&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;SAT&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="639"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;SUN&quot;, should use `@string` resource"
+        errorLine1="                                android:text=&quot;SUN&quot;"
+        errorLine2="                                ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="652"
+            column="33"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;10:00 AM&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;10:00 AM&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="678"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;  –  &quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;  –  &quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="689"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;2:00 PM&quot;, should use `@string` resource"
+        errorLine1="                            android:text=&quot;2:00 PM&quot;"
+        errorLine2="                            ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_doctor.xml"
+            line="699"
+            column="29"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Profile&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Profile&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="27"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Edit Profile&quot;, should use `@string` resource"
+        errorLine1="        android:contentDescription=&quot;Edit Profile&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="44"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Manash Khatowal&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Manash Khatowal&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="85"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;manasash26@gmail.com&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;manasash26@gmail.com&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="97"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Mobile&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Mobile&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="128"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;8133919030&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;8133919030&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="136"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Gender&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Gender&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="147"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Male&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Male&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="157"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Date of Birth&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Date of Birth&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="168"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;15/12/2025&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;15/12/2025&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="178"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Status&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Status&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="189"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Patient&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Patient&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/fragment_profile_patient.xml"
+            line="199"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Alexander Wright&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Alexander Wright&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/history_appointment_item.xml"
+            line="33"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;COMPLETED&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;COMPLETED&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/history_appointment_item.xml"
+            line="57"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Video Consultation&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Video Consultation&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/history_appointment_item.xml"
+            line="86"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;DATE&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;DATE&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/history_appointment_item.xml"
+            line="97"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;26 Jan 2026 &quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;26 Jan 2026 &quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/history_appointment_item.xml"
+            line="109"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Prescription&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Prescription&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/history_appointment_item.xml"
+            line="122"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Alexander Wright&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Alexander Wright&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_appointment.xml"
+            line="33"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;NOW&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;NOW&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_appointment.xml"
+            line="47"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Video Consultation&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Video Consultation&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_appointment.xml"
+            line="78"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;TIME&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;TIME&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_appointment.xml"
+            line="91"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;09:30 AM&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;09:30 AM&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_appointment.xml"
+            line="104"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Start&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Start&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_appointment.xml"
+            line="118"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;MON&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;MON&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_date.xml"
+            line="21"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;12&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;12&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_date.xml"
+            line="27"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Dr. Sarah Wilson&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Dr. Sarah Wilson&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_doctor.xml"
+            line="39"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Cardiologist&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Cardiologist&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_doctor.xml"
+            line="48"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;⭐ &quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;⭐ &quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_doctor.xml"
+            line="60"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;4.8&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;4.8&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_doctor.xml"
+            line="68"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot; • &quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot; • &quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_doctor.xml"
+            line="75"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Rating&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Rating&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_doctor.xml"
+            line="81"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot; • &quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot; • &quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_doctor.xml"
+            line="88"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Available Today&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Available Today&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_doctor.xml"
+            line="97"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Paracetamol&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Paracetamol&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_medicine.xml"
+            line="29"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;10mg&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;10mg&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_medicine.xml"
+            line="52"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Once Daily at night&quot;, should use `@string` resource"
+        errorLine1="                    android:text=&quot;Once Daily at night&quot;"
+        errorLine2="                    ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_medicine.xml"
+            line="73"
+            column="21"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Medicine&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Medicine&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_medicine_presc.xml"
+            line="15"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Instruction&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Instruction&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_medicine_presc.xml"
+            line="25"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;12:30 PM&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;12:30 PM&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/item_slot.xml"
+            line="20"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;GENERAL HOSPITAL&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;GENERAL HOSPITAL&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="27"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;123 Health Boulevard, Metro City&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;123 Health Boulevard, Metro City&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="35"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;MedTrust&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;MedTrust&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="56"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;PATIENT NAME&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;PATIENT NAME&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="82"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Alex J. Henderson&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Alex J. Henderson&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="90"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;PHYSICIAN&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;PHYSICIAN&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="104"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Dr. Sarah Wilson&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Dr. Sarah Wilson&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="112"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;PATIENT&apos;S GENDER , DOB&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;PATIENT&apos;S GENDER , DOB&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="133"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Male, 23/23/2000&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;Male, 23/23/2000&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="141"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;PHYSICIAN&apos;S LISCENCE&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;PHYSICIAN&apos;S LISCENCE&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="155"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;3627638292&quot;, should use `@string` resource"
+        errorLine1="                android:text=&quot;3627638292&quot;"
+        errorLine2="                ~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="163"
+            column="17"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;PRESCRIBED MEDICINES&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;PRESCRIBED MEDICINES&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="180"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Medicine&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Medicine&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="197"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Instruction&quot;, should use `@string` resource"
+        errorLine1="            android:text=&quot;Instruction&quot;"
+        errorLine2="            ~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="206"
+            column="13"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;DOCTOR&apos;S NOTES&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;DOCTOR&apos;S NOTES&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="220"
+            column="9"/>
+    </issue>
+
+    <issue
+        id="HardcodedText"
+        message="Hardcoded string &quot;Something&quot;, should use `@string` resource"
+        errorLine1="        android:text=&quot;Something&quot;"
+        errorLine2="        ~~~~~~~~~~~~~~~~~~~~~~~~">
+        <location
+            file="src/main/res/layout/prescription_view.xml"
+            line="230"
+            column="9"/>
+    </issue>
+
+</issues>
