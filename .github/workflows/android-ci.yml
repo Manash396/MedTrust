@@ -33,7 +33,7 @@ jobs:
 
       - name: create a secrets xml file
         run: |
-          printf '%s' '${{ secrets.ANDROID_SECRET_KEYS  }}' > app/src/main/res/values/secret.xml
+          printf '%s' '${{ secrets.RAZORPAY_TEST_API_KEY  }}' > app/src/main/res/values/secret.xml
 
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
