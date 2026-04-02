@@ -13,7 +13,7 @@ import com.yourpackage.app.AppPreferences
 import com.zegocloud.uikit.prebuilt.call.ZegoUIKitPrebuiltCallConfig
 import com.zegocloud.uikit.prebuilt.call.ZegoUIKitPrebuiltCallFragment
 
-class PatientCallActivity : AppCompatActivity() {
+class  PatientCallActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
@@ -28,8 +28,9 @@ class PatientCallActivity : AppCompatActivity() {
     }
 
     private fun addCallFragment() {
-        val appID: Long = 129447961
-        val appSign: String = "873e98c886d7afee9a49237acb2ffe43be4437e79a16739395506f2333501c5b"
+        val appID: Long = getString(R.string.appIdZegoCloud).toLongOrNull() ?: 0L
+        val appSign: String = getString(R.string.appSignZegoCloud)
+
         var callID: String = intent.getStringExtra("callId") ?: ""
         val userID: String = AppPreferences.getString(AppConstant.UID)
         val userName: String = AppPreferences.getString(AppConstant.USERNAME)
