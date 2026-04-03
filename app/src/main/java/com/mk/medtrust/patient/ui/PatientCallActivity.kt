@@ -28,6 +28,7 @@ class  PatientCallActivity : AppCompatActivity() {
     }
 
     private fun addCallFragment() {
+        // removed the hardcoded keys
         val appID: Long = getString(R.string.appIdZegoCloud).toLongOrNull() ?: 0L
         val appSign: String = getString(R.string.appSignZegoCloud)
 
