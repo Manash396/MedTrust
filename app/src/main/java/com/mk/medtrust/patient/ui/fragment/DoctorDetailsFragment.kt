@@ -247,8 +247,11 @@ class DoctorDetailsFragment : Fragment() {
                 return@setOnClickListener
             }
 
-            var amtInPaise = (binding.fee.text.toString().replace("[^0-9]".toRegex(),"")).toInt()
-            amtInPaise *= 100
+            val amtInPaise = binding.fee.text
+                .filter { it.isDigit() }
+                .toString()
+                .toIntOrNull()
+                ?.times(100) ?: 0
 
             val intent = Intent(requireContext() , PaymentActivity::class.java)
             intent.putExtra(PaymentConstants.EXTRA_AMOUNT,amtInPaise)
