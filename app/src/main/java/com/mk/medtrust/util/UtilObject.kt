@@ -79,9 +79,11 @@ object UtilObject {
         // measure & layout view
         // since i am using the inflated view not rendered one
 
-        if (view.width <=0 || view.height <=0){
-            return Uri.EMPTY
-        }
+//        if (view.width <=0 || view.height <=0){
+//            return Uri.EMPTY
+//        }
+    Log.d("PDF_DEBUG", "Width: ${view.measuredWidth}, Height: ${view.measuredHeight}")
+
 
         val widthSpec = View.MeasureSpec.makeMeasureSpec(
             Resources.getSystem().displayMetrics.widthPixels,
@@ -191,5 +193,6 @@ object UtilObject {
         )
     }
 
+    const val DISEASE_P_WEB_URL = "https://disease-prediction-tay1.onrender.com"
 
 }

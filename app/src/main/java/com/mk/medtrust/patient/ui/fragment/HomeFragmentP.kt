@@ -89,6 +89,10 @@ class HomeFragmentP : Fragment() {
             if (!isAppointmentFetched) return@setOnClickListener
             findNavController().navigate(R.id.homeFragment_to_historyListPFragment)
         }
+        binding.cardDisease.setOnClickListener {
+            findNavController().navigate(R.id.homeFragment_to_diseasePredictionFragment)
+        }
+
     }
 
     private fun checkForOngoingAppointments(){
