@@ -27,6 +27,10 @@
             android:id="@+id/homeFragment_to_historyListPFragment"
             app:destination="@+id/historyListPFragment"
             />
+        <action
+            android:id="@+id/homeFragment_to_diseasePredictionFragment"
+            app:destination="@+id/diseasePredictionFragment"
+            />
     </fragment>
 
     <fragment
@@ -100,6 +104,14 @@
             android:name="appointmentId"
             app:argType="string"
             />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/diseasePredictionFragment"
+        android:name="com.mk.medtrust.patient.ui.fragment.DiseasePredictionFragment"
+        tools:layout="@layout/fragment_disease_prediction">
+
     </fragment>
 
 

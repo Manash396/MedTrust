@@ -258,7 +258,7 @@ class AppointmentDetailPFragment : Fragment() {
         }
 
         try {
-            startActivity(openIntent)
+            startActivity(Intent.createChooser(openIntent, "Open PDF"))
         } catch (e: ActivityNotFoundException) {
             Toast.makeText(requireContext(), "No PDF viewer installed", Toast.LENGTH_SHORT).show()
         }
@@ -347,7 +347,7 @@ class AppointmentDetailPFragment : Fragment() {
 
     override fun onDestroyView() {
         super.onDestroyView()
-        _binding = null // 🔥 prevents memory leak
+        _binding = null //
     }
 }
 
