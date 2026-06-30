@@ -79,14 +79,19 @@ dependencies {
     testImplementation(libs.junit)
     testImplementation("com.google.truth:truth:1.1.5")
     testImplementation(libs.junit.junit)
-    testImplementation(libs.junit.junit)
     androidTestImplementation("com.google.truth:truth:1.1.5")
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+
 
     implementation(libs.hilt.android)
     implementation("com.jakewharton.timber:timber:5.0.1")
 
     ksp(libs.hilt.compiler)
+
+    // for fake repository
+    testImplementation("org.jetbrains.kotlinx:kotlinx-coroutines-test:1.7.3")
+    testImplementation("io.mockk:mockk:1.13.8")
+    testImplementation("androidx.arch.core:core-testing:2.2.0")
 
 }

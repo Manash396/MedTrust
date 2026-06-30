@@ -4,7 +4,6 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import com.mk.medtrust.auth.data.model.AppUser
 import com.mk.medtrust.auth.data.repository.AuthRepository
 import com.mk.medtrust.doctor.model.Doctor
 import com.mk.medtrust.patient.model.Patient
@@ -46,12 +45,12 @@ class AuthViewModel @Inject constructor(
         }
     }
 
-    fun login(email : String , key : String, isDoctor : Boolean) {
-        viewModelScope.launch {
-            _loginState.value = Result.Loading
-            _loginState.value = repo.login(email, key, isDoctor)
+        fun login(email : String , key : String, isDoctor : Boolean) {
+            viewModelScope.launch {
+                _loginState.value = Result.Loading
+                _loginState.value = repo.login(email, key, isDoctor)
+            }
         }
-    }
 
 
 }
