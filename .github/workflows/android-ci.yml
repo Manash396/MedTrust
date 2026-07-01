@@ -3,12 +3,12 @@ on:
   push:
     branches:
       - "main"
-      - "feature"
 
   pull_request:
     branches:
       - "main"
       - "feature"
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -40,4 +40,7 @@ jobs:
 
       - name: Build project
         run: ./gradlew build
+
+      - name: Run Unit Test
+        run: ./gradlew testDebugUnitTest
 
