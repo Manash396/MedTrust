@@ -79,9 +79,6 @@ object UtilObject {
         // measure & layout view
         // since i am using the inflated view not rendered one
 
-//        if (view.width <=0 || view.height <=0){
-//            return Uri.EMPTY
-//        }
     Log.d("PDF_DEBUG", "Width: ${view.measuredWidth}, Height: ${view.measuredHeight}")
 
 
@@ -95,7 +92,13 @@ object UtilObject {
             View.MeasureSpec.makeMeasureSpec(0 , View.MeasureSpec.UNSPECIFIED)
         )
 
+
         view.layout(0,0,view.measuredWidth , view.measuredHeight)
+
+
+    if (view.width <=0 || view.height <=0){
+        return Uri.EMPTY
+    }
 
         // a white paper
         val bitMap  = createBitmap(view.measuredWidth, view.measuredHeight)

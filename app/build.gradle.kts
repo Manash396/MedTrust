@@ -29,13 +29,37 @@ android {
         baseline = file("lint-baseline.xml")
     }
 
+//    best way to customize this build types for smooth development and shifting for production release
     buildTypes {
-        release {
+        debug {
+//          Super useful for testing production vs dev side-by-side
+            applicationIdSuffix = ".debugMk"
+            versionNameSuffix = "-debugMk"
+
+            isDebuggable = true
             isMinifyEnabled = false
+            isShrinkResources = false
+            enableUnitTestCoverage = true
+
+            buildConfigField("String", "BASE_URL", "\"https://dev.api.com/\"")
+            buildConfigField("Boolean", "ENABLE_LOGS", "true")
+
+
+        }
+        release {
+            isDebuggable = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+//            disable the log
+            buildConfigField("String", "BASE_URL", "\"https://dev.release.api.com/\"")
+            buildConfigField("Boolean", "ENABLE_LOGS", "false")
+
+            applicationIdSuffix = ""
+            versionNameSuffix = ""
         }
     }
     compileOptions {
