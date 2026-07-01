@@ -33,7 +33,7 @@ android {
     buildTypes {
         debug {
 //          Super useful for testing production vs dev side-by-side
-            applicationIdSuffix = ".debugMk"
+            applicationIdSuffix = ""
             versionNameSuffix = "-debugMk"
 
             isDebuggable = true
@@ -74,6 +74,7 @@ android {
 
     buildFeatures{
         viewBinding = true
+        buildConfig = true
     }
 }
 
