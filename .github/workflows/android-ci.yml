@@ -31,8 +31,14 @@ jobs:
   unit-test:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
       - name: import set up
         uses: ./.github/actions/android-setup
+        with:
+          google-services: ${{ secrets.GOOGLE_SERVICES_API_KEY }}
+          android-secrets: ${{ secrets.ANDROID_SECRET_KEYS }}
 
       - name: Run Unit Test
         run: ./gradlew testDebugUnitTest
