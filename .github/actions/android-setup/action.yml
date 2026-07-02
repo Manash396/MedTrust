@@ -1,0 +1,32 @@
+name: Android Setup
+runs:
+  using: "composite"
+  steps:
+    - name: Checkout code
+      uses: actions/checkout@v4
+
+    - name: Set up JDK 17
+      uses: actions/setup-java@v4
+      with:
+        distribution: 'temurin'
+        java-version: 17
+
+    - name: Decode into app/google-services.json
+      run: |
+        printf '%s' '${{ secrets.GOOGLE_SERVICES_API_KEY }}' > app/google-services.json
+      shell: bash
+
+    - name: Check created file
+      run: |
+        cat app/google-services.json
+      shell: bash
+
+    - name: create a secrets xml file
+      run: |
+        printf '%s' '${{ secrets.ANDROID_SECRET_KEYS  }}' > app/src/main/res/values/secret.xml
+      shell: bash
+
+    - name: Grant execute permission for gradlew
+      run: chmod +x gradlew
+      shell: bash
+

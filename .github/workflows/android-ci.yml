@@ -12,35 +12,24 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout code
-        uses: actions/checkout@v4
-
-      - name: Set up JDK 17
-        uses: actions/setup-java@v4
-        with:
-         distribution: 'temurin'
-         java-version: 17
-
-      - name: Decode into app/google-services.json
-        run: |
-          printf '%s' '${{ secrets.GOOGLE_SERVICES_API_KEY }}' > app/google-services.json
-
-      - name: Check created file
-        run: |
-            cat app/google-services.json
-
-      - name: create a secrets xml file
-        run: |
-          printf '%s' '${{ secrets.ANDROID_SECRET_KEYS  }}' > app/src/main/res/values/secret.xml
-
-      - name: Grant execute permission for gradlew
-        run: chmod +x gradlew
+      - name: import set up
+        uses: ./.github/actions/android-setup
 
       - name: Build project
         run: ./gradlew build
 
       - name: Run Unit Test
         run: ./gradlew testDebugUnitTest
+
+  unit-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: import set up
+        uses: ./.github/actions/android-setup
+
+      - name: Run Unit Test
+        run: ./gradlew testDebugUnitTest
+
+
 
